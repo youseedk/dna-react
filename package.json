@@ -1,6 +1,6 @@
 {
   "name": "ys-react",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "React library for the YouSee design system",
   "main": "lib/index.js",
   "scripts": {
@@ -26,6 +26,9 @@
   },
   "devDependencies": {
     "@babel/core": "^7.3.3",
+    "@babel/plugin-proposal-class-properties": "^7.3.3",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
     "@storybook/addon-actions": "^4.1.13",
     "@storybook/addon-knobs": "^4.1.13",
     "@storybook/react": "^4.1.13",
