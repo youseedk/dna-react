@@ -20,7 +20,8 @@
   "homepage": "https://github.com/havgry/ys-react#readme",
   "dependencies": {
     "prop-types": "^15.7.2",
-    "react": "^16.8.3"
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3"
   },
   "devDependencies": {
     "@babel/core": "^7.3.3",
@@ -28,6 +29,8 @@
     "@storybook/addon-knobs": "^4.1.13",
     "@storybook/react": "^4.1.13",
     "babel-loader": "^8.0.5",
+    "css-loader": "^2.1.0",
+    "style-loader": "^0.23.1",
     "webpack": "^4.29.5",
     "webpack-cli": "^3.2.3"
   }

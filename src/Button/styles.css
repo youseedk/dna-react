@@ -1,0 +1,170 @@
+@charset "UTF-8";
+/* IMPORT WEBFONTS HERE so elements can be used with different font loading strategies */
+@font-face {
+  font-family: 'Etica';
+  src: url("//s.c.dk/fonts/lft_etica_light-webfont.woff2") format("woff2"), url("//s.c.dk/fonts/lft_etica_light-webfont.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: 'Etica';
+  src: url("//s.c.dk/fonts/lft_etica_reg-webfont.woff2") format("woff2"), url("//s.c.dk/fonts/lft_etica_reg-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: 'Etica';
+  src: url("//s.c.dk/fonts/lft_etica_semibold-webfont.woff2") format("woff2"), url("//s.c.dk/fonts/lft_etica_semibold-webfont.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: 'Etica';
+  src: url("//s.c.dk/fonts/lft_etica_bold-webfont.woff2") format("woff2"), url("//s.c.dk/fonts/lft_etica_bold-webfont.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap; }
+
+
+/* Typography rules - reused for classes and rich text stuff */
+/**
+ *
+ *	Variables
+ *
+ */
+/* "foundation" file including utils*/
+/* line 1, src/assets/scss/_base.scss */
+[class*='ys'],
+[class*='ys']::before,
+[class*='ys']::after {
+  box-sizing: border-box;
+  font-family: "Etica", arial, helvetica, sans-serif; }
+
+/**
+ *
+ *	Variables
+ *
+ */
+/* Shadows for input fields, textareas, selects */
+/* Small UI transition on shadow */
+/* Label Text for input field, select and textarea */
+/* Guidance Text for input field, select and textarea */
+/* Blue outline for custom elements (radio, checkbox etc) */
+/* Typography rules - reused for classes and rich text stuff */
+/* Default button is transparent with a dark border*/
+/* line 6, src/assets/scss/elements/_button.scss */
+.ys-button {
+  display: inline-flex;
+  align-items: center;
+  flex-flow: row nowrap;
+  justify-content: center;
+  height: 3rem;
+  padding: 0 3rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.5;
+  text-decoration: none;
+  text-align: center;
+  background-color: transparent;
+  border: 0;
+  color: #484848;
+  border-radius: 3rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  box-shadow: inset 0 0 0 2px currentColor;
+  transition: all .25s ease-out;
+  /* Disabled button — use with caution */
+  /* icon size is the same in both buttons that contain icons */
+  /* Transparent button with light border */
+  /* Green CTA button */
+  /* Solid dark button with white text */
+  /* Solid light button with dark text */
+  /* Stripped button which resembles a link without an underline */
+  /* block takes up 100% width of it's container */
+  /* Button with icon */
+  /* Button that only DISPLAYS an icon - text is hidden using the ys-u-visuallyhidden class */ }
+  /* line 34, src/assets/scss/elements/_button.scss */
+  .ys-button:disabled, .ys-button.ys-disabled {
+    background-color: #f0f0f0;
+    color: #a2a2a2;
+    box-shadow: none;
+    cursor: not-allowed; }
+  /* line 42, src/assets/scss/elements/_button.scss */
+  .ys-button:focus:not(:focus-visible) {
+    outline: 0; }
+  /* line 46, src/assets/scss/elements/_button.scss */
+  .ys-button:not(:disabled):not(.ys-disabled):not([class*='ys-button--stripped']):hover {
+    box-shadow: inset 0 0 0 0 #484848, 0 0 0 2px #1fab2e; }
+  /* line 51, src/assets/scss/elements/_button.scss */
+  .ys-button__icon {
+    width: 1rem;
+    height: 1rem; }
+    /* line 55, src/assets/scss/elements/_button.scss */
+    .ys-button__icon > * {
+      display: block;
+      width: 100%;
+      height: 100%; }
+  /* line 63, src/assets/scss/elements/_button.scss */
+  .ys-button--light {
+    color: #fff; }
+  /* line 68, src/assets/scss/elements/_button.scss */
+  .ys-button--cta {
+    background-color: #1fab2e;
+    color: #fff;
+    box-shadow: inset 0 0 0 0 transparent, 0 0 0 0 transparent; }
+  /* line 76, src/assets/scss/elements/_button.scss */
+  .ys-button--solid-dark {
+    background-color: #484848;
+    color: #fff;
+    box-shadow: inset 0 0 0 transparent; }
+    /* line 82, src/assets/scss/elements/_button.scss */
+    .ys-button--solid-dark:not(:disabled):not(.ys-disabled):not([class*='ys-button--stripped']):hover {
+      box-shadow: inset 0 0 0 0 transparent, 0 0 0 2px #484848; }
+  /* line 88, src/assets/scss/elements/_button.scss */
+  .ys-button--solid-light {
+    background-color: #fff;
+    color: #484848;
+    box-shadow: inset 0 0 0 0 transparent; }
+    /* line 94, src/assets/scss/elements/_button.scss */
+    .ys-button--solid-light:not(:disabled):not(.ys-disabled):not([class*='ys-button--stripped']):hover {
+      box-shadow: inset 0 0 0 0 transparent, 0 0 0 2px #fff; }
+  /* line 100, src/assets/scss/elements/_button.scss */
+  .ys-button--stripped-dark {
+    color: #484848; }
+  /* line 104, src/assets/scss/elements/_button.scss */
+  .ys-button--stripped-light {
+    color: #fff; }
+  /* line 108, src/assets/scss/elements/_button.scss */
+  .ys-button--stripped-dark, .ys-button--stripped-light {
+    padding: 0 1rem;
+    background-color: transparent;
+    box-shadow: 0 0 0 0 transparent; }
+    /* line 114, src/assets/scss/elements/_button.scss */
+    .ys-button--stripped-dark:hover, .ys-button--stripped-light:hover {
+      color: #1fab2e;
+      box-shadow: 0 0 0 0 transparent; }
+  /* line 121, src/assets/scss/elements/_button.scss */
+  .ys-button--block {
+    min-width: 100%; }
+    /* line 124, src/assets/scss/elements/_button.scss */
+    .ys-button--block::before, .ys-button--block::after {
+      content: '';
+      flex: 0 0 3rem; }
+  /* line 134, src/assets/scss/elements/_button.scss */
+  .ys-button--icon .ys-button__text + .ys-button__icon,
+  .ys-button--icon .ys-button__text + .ys__button__text {
+    margin-left: 1rem; }
+  /* line 141, src/assets/scss/elements/_button.scss */
+  .ys-button--icon-only {
+    padding: 0 1rem; }
+  /* line 145, src/assets/scss/elements/_button.scss */
+  .ys-button__text {
+    white-space: nowrap; }
