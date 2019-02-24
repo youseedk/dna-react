@@ -8,9 +8,15 @@ class Button extends Component {
 
   static propTypes = {
     label: PropTypes.string.isRequired,
-    onClick: PropTypes.func,
+    onClick: PropTypes.func, // TODO: Add custom validation, as either `onClick` or `href` is required
     href: PropTypes.string,
+    variant: PropTypes.oneOf(['default', 'light', 'cta', 'solid-dark', 'solid-light', 'stripped-dark', 'stripped-light']),
     disabled: PropTypes.bool,
+  }
+
+  static defaultProps = {
+    variant: 'default',
+    disabled: false,
   }
 
   render() {
@@ -20,15 +26,17 @@ class Button extends Component {
       onClick,
       disabled,
       className,
+      variant,
     } = this.props
 
-    const buttonContent = <span class="ys-button__text">{label}</span>
+    const buttonContent = <span className="ys-button__text">{label}</span>
 
     const wrapperProps = {
       disabled,
       className: classNames(
         className,
         'ys-button',
+        `ys-button--${variant}`,
         disabled && 'ys-disabled'
       ),
     }
