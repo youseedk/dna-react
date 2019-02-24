@@ -1,6 +1,6 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { withKnobs, text } from '@storybook/addon-knobs'
+import { withKnobs, text, boolean } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
 
 import Button from './Button';
@@ -13,10 +13,13 @@ stories
     <Button
       onClick={action('click')}
       label={text('Label', 'Label text')}
+      disabled={boolean('Disabled', false)}
     />
-  )).add('Link', () => (
+  ))
+  .add('Link', () => (
     <Button
       href={text('URL', 'https://yousee.dk')}
       label={text('Label', 'Label text')}
+      disabled={boolean('Disabled', false)}
     />
   ))
