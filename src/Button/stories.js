@@ -1,12 +1,22 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { withKnobs, text, boolean, number } from '@storybook/addon-knobs'
+import { withKnobs, text } from '@storybook/addon-knobs'
+import { action } from '@storybook/addon-actions'
 
 import Button from './Button';
 
 const stories = storiesOf('Button', module);
 stories.addDecorator(withKnobs)
 
-stories.add('Default', () => (
-  <Button>{text('Label', 'Label text')}</Button>
-))
+stories
+  .add('Default', () => (
+    <Button
+      onClick={action('click')}
+      label={text('Label', 'Label text')}
+    />
+  )).add('Link', () => (
+    <Button
+      href={text('URL', 'https://yousee.dk')}
+      label={text('Label', 'Label text')}
+    />
+  ))

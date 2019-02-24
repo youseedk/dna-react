@@ -4,12 +4,31 @@ import PropTypes from 'prop-types'
 class Button extends Component {
 
   static propTypes = {
-    children: PropTypes.node.isRequired,
+    label: PropTypes.string.isRequired,
+    onClick: PropTypes.func,
+    href: PropTypes.string,
+  }
+
+  wrapperProps = {
+    className: "ys-button",
   }
 
   render() {
+    const { label, href, onClick } = this.props
+    const buttonContent = <span class="ys-button__text">{label}</span>
+
+    if (href) {
+      return (
+        <a href={href} {...this.wrapperProps}>
+          {buttonContent}
+        </a>
+      )
+    }
+
     return (
-      <button {...this.props}>{this.props.children}</button>
+      <button onClick={onClick} {...this.wrapperProps}>
+        {buttonContent}
+      </button>
     )
   }
 }
