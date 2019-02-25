@@ -33,5 +33,6 @@ stories
       label={text(...labelOptions)}
       variant={select('Variant', variantOptions, variantOptions.default)}
       href={text('URL', 'https://yousee.dk')}
+      disabled={boolean('Disabled', false)}
     />
   ))
