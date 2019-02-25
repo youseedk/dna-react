@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode production",
-    "storybook": "start-storybook -p 9001"
+    "storybook": "start-storybook -p 9001",
+    "deploy-storybook": "storybook-to-ghpages"
   },
   "repository": {
     "type": "git",
@@ -32,6 +33,7 @@
     "@storybook/addon-actions": "^4.1.13",
     "@storybook/addon-knobs": "^4.1.13",
     "@storybook/react": "^4.1.13",
+    "@storybook/storybook-deployer": "^2.8.1",
     "babel-loader": "^8.0.5",
     "css-loader": "^2.1.0",
     "style-loader": "^0.23.1",
