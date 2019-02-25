@@ -1,12 +1,10 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { withKnobs, text, boolean, select } from '@storybook/addon-knobs'
+
+import { text, boolean, select } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
 
 import Button from './Button';
-
-const stories = storiesOf('Button', module);
-stories.addDecorator(withKnobs)
 
 const variantOptions = {
   default: 'default',
@@ -19,7 +17,7 @@ const variantOptions = {
 }
 const labelOptions = ['Label', 'Label text']
 
-stories
+storiesOf('Button', module)
   .add('Default', () => (
     <Button
       label={text(...labelOptions)}
