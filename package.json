@@ -4,7 +4,9 @@
   "description": "React library for the YouSee design system",
   "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
+    "test:full": "npm run test -- --coverage",
+    "test:watch": "npm run test -- --watch",
     "build": "webpack --mode production",
     "storybook": "start-storybook -p 9001",
     "deploy-storybook": "storybook-to-ghpages"
@@ -19,6 +21,14 @@
     "url": "https://github.com/havgry/ys-react/issues"
   },
   "homepage": "https://github.com/havgry/ys-react#readme",
+  "jest": {
+    "setupFilesAfterEnv": ["<rootDir>/src/setupTests.js"],
+    "snapshotSerializers": ["enzyme-to-json/serializer"],
+    "transform": {
+      "^.+\\.js$": "babel-jest",
+      ".+\\.(css|scss)$": "jest-transform-stub"
+    }
+  },
   "dependencies": {
     "classnames": "^2.2.6",
     "prop-types": "^15.7.2",
@@ -36,8 +46,14 @@
     "@storybook/addon-storysource": "^4.1.13",
     "@storybook/react": "^4.1.13",
     "@storybook/storybook-deployer": "^2.8.1",
+    "babel-jest": "^24.1.0",
     "babel-loader": "^8.0.5",
     "css-loader": "^2.1.0",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.10.0",
+    "enzyme-to-json": "^3.3.5",
+    "jest": "^24.1.0",
+    "jest-transform-stub": "^2.0.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.29.5",
     "webpack-cli": "^3.2.3"
