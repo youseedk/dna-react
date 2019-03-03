@@ -12,6 +12,7 @@ class Button extends Component {
     href: PropTypes.string,
     variant: PropTypes.oneOf(['default', 'light', 'cta', 'solid-dark', 'solid-light', 'stripped-dark', 'stripped-light']),
     disabled: PropTypes.bool,
+    className: PropTypes.string,
   }
 
   static defaultProps = {
@@ -34,10 +35,10 @@ class Button extends Component {
     const wrapperProps = {
       disabled,
       className: classNames(
-        className,
         'ys-button',
         `ys-button--${variant}`,
-        disabled && 'ys-disabled'
+        disabled && 'ys-disabled',
+        className,
       ),
     }
 
