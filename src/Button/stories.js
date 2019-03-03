@@ -18,6 +18,7 @@ const variantOptions = {
 const labelOptions = ['Label', 'Label text']
 
 storiesOf('Button', module)
+  .addParameters({ jest: ['Button'] })
   .add('Default', () => (
     <Button
       label={text(...labelOptions)}

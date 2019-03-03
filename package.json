@@ -7,7 +7,9 @@
     "test": "jest",
     "test:full": "npm run test -- --coverage",
     "test:watch": "npm run test -- --watch",
+    "test:generate-output": "jest --json --outputFile=.jest-test-results.json || true",
     "build": "webpack --mode production",
+    "prebuild:storybook": "npm run test:generate-output",
     "storybook": "start-storybook -p 9001",
     "deploy-storybook": "storybook-to-ghpages"
   },
@@ -22,8 +24,12 @@
   },
   "homepage": "https://github.com/havgry/ys-react#readme",
   "jest": {
-    "setupFilesAfterEnv": ["<rootDir>/src/setupTests.js"],
-    "snapshotSerializers": ["enzyme-to-json/serializer"],
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/setupTests.js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
     "transform": {
       "^.+\\.js$": "babel-jest",
       ".+\\.(css|scss)$": "jest-transform-stub"
@@ -42,6 +48,7 @@
     "@babel/preset-react": "^7.0.0",
     "@storybook/addon-actions": "^4.1.13",
     "@storybook/addon-centered": "^4.1.13",
+    "@storybook/addon-jest": "^4.1.13",
     "@storybook/addon-knobs": "^4.1.13",
     "@storybook/addon-storysource": "^4.1.13",
     "@storybook/react": "^4.1.13",
