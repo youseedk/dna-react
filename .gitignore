@@ -3,3 +3,4 @@ lib
 yarn-error.log
 coverage
 .jest-test-results.json
+.vscode
