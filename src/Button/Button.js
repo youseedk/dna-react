@@ -37,21 +37,25 @@ class Button extends Component {
       className: classNames(
         'ys-button',
         `ys-button--${variant}`,
-        disabled && 'ys-disabled',
+        disabled && 'ys-disabled', // TODO: This feels very anti-BEM
         className,
       ),
     }
 
     if (href) {
       return (
-        <a href={href} {...wrapperProps}>
+        <a
+          href={href}
+          {...wrapperProps}>
           {buttonContent}
         </a>
       )
     }
 
     return (
-      <button onClick={onClick} {...wrapperProps}>
+      <button
+        onClick={onClick}
+        {...wrapperProps}>
         {buttonContent}
       </button>
     )
