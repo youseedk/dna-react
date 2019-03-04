@@ -4,7 +4,7 @@
   "description": "React library for the YouSee design system",
   "main": "lib/index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest && codecov",
     "test:full": "npm run test -- --coverage",
     "test:watch": "npm run test -- --watch",
     "test:generate-output": "jest --json --outputFile=.jest-test-results.json || true",
@@ -33,7 +33,9 @@
     "transform": {
       "^.+\\.js$": "babel-jest",
       ".+\\.(css|scss)$": "jest-transform-stub"
-    }
+    },
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
   },
   "dependencies": {
     "classnames": "^2.2.6",
@@ -55,6 +57,7 @@
     "@storybook/storybook-deployer": "^2.8.1",
     "babel-jest": "^24.1.0",
     "babel-loader": "^8.0.5",
+    "codecov": "^3.2.0",
     "css-loader": "^2.1.0",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.10.0",
