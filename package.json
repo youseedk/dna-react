@@ -35,6 +35,7 @@
       ".+\\.(css|scss)$": "jest-transform-stub"
     },
     "coverageDirectory": "./coverage/",
+    "collectCoverage": true,
     "collectCoverageFrom": [
       "src/**/*.jsx",
       "!src/**/stories.jsx"
