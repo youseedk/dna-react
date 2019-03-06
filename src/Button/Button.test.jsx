@@ -1,15 +1,18 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import { shallow, mount as mountComponent } from 'enzyme'
 
 import Button from './Button'
 
 const defaultLabel = 'Click me!'
-const shallowRender = props => shallow(
+const getButton = props => (
   <Button
     label={defaultLabel}
     {...props}
-  />,
+  />
 )
+
+const shallowRender = props => shallow(getButton(props))
+const mount = props => mountComponent(getButton(props))
 
 describe('<Button>', () => {
   it('Throws propType warning if no `label` prop is passed', () => {
@@ -92,6 +95,7 @@ describe('<Button>', () => {
 
   it('Supports and adds the correct `variant` class to the container', () => {
     const variants = ['default', 'light', 'cta', 'solid-dark', 'solid-light', 'stripped-dark', 'stripped-light']
+
     variants.forEach((variant) => {
       const component = shallowRender({
         onClick: jest.fn(),
@@ -123,12 +127,14 @@ describe('<Button>', () => {
   })
 
   it('Has correct defaultProps', () => {
-    const component = shallowRender({
+    const component = mount({
       onClick: jest.fn(),
     })
-    const { variant, disabled } = component.instance().props
+
+    const { variant, disabled, className } = component.props()
 
     expect(variant).toBe('default')
     expect(disabled).toBe(false)
+    expect(className).toBe('')
   })
 })
