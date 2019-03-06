@@ -4,15 +4,15 @@ import { storiesOf } from '@storybook/react'
 import { text, boolean, select } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
 
-import Button from './Button';
+import Button from './Button'
 
 const variantOptions = {
   default: 'default',
-  light: 'light', 
+  light: 'light',
   cta: 'cta',
   'solid-dark': 'solid-dark',
   'solid-light': 'solid-light',
-  'stripped-dark': 'stripped-dark', 
+  'stripped-dark': 'stripped-dark',
   'stripped-light': 'stripped-light',
 }
 const labelOptions = ['Label', 'Label text']

@@ -3,7 +3,8 @@
   "plugins": ["jest"],
   "parser": "babel-eslint",
   "rules": {
-    "semi": [2, "never"]
+    "semi": [2, "never"],
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }]
   },
   "env": {
     "jest/globals": true

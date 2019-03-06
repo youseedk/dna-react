@@ -5,14 +5,17 @@ import { withTests } from '@storybook/addon-jest'
 
 import results from '../.jest-test-results.json'
 
-const req = require.context('../src', true, /[^/]+\/stories.js$/);
+const req = require.context('../src', true, /[^/]+\/stories.jsx$/)
 
 addDecorator(withKnobs)
 addDecorator(centered)
-addDecorator(withTests({ results }))
+addDecorator(withTests({
+  results,
+  filesExt: '.test.jsx',
+}))
 
-function loadStories() {
-	req.keys().forEach((filename) => req(filename));
+const loadStories = () => {
+  req.keys().forEach(filename => req(filename))
 }
 
-configure(loadStories, module);
+configure(loadStories, module)

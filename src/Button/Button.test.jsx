@@ -8,11 +8,10 @@ const shallowRender = props => shallow(
   <Button
     label={defaultLabel}
     {...props}
-  />
+  />,
 )
 
 describe('<Button>', () => {
-
   it('Throws propType warning if no `label` prop is passed', () => {
     const componentShallowRender = () => shallowRender({
       href: 'https://yousee.dk',
@@ -101,7 +100,6 @@ describe('<Button>', () => {
 
       expect(component.find(`.ys-button.ys-button--${variant}`)).toHaveLength(1)
     })
-
   })
 
   it('Throws propType warning if unsupported `variant` prop is passed', () => {
@@ -128,10 +126,9 @@ describe('<Button>', () => {
     const component = shallowRender({
       onClick: jest.fn(),
     })
-    const props = component.instance().props
+    const { variant, disabled } = component.instance().props
 
-    expect(props.variant).toBe('default')
-    expect(props.disabled).toBe(false)
+    expect(variant).toBe('default')
+    expect(disabled).toBe(false)
   })
-
 })
