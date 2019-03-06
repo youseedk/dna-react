@@ -5,9 +5,9 @@
   "main": "lib/index.js",
   "scripts": {
     "test": "jest",
-    "test:full": "npm run test -- --coverage",
+    "test:coverage": "npm run test -- --coverage",
     "test:watch": "npm run test -- --watch",
-    "test:generate-output": "jest --json --outputFile=.jest-test-results.json || true",
+    "test:generate-output": "npm run test -- --json --outputFile=.jest-test-results.json || true",
     "build": "webpack --mode production",
     "prebuild:storybook": "npm run test:generate-output",
     "storybook": "start-storybook -p 9001",
@@ -35,7 +35,10 @@
       ".+\\.(css|scss)$": "jest-transform-stub"
     },
     "coverageDirectory": "./coverage/",
-    "collectCoverage": true
+    "collectCoverageFrom": [
+      "src/**/*.jsx",
+      "!src/**/stories.jsx"
+    ]
   },
   "dependencies": {
     "classnames": "^2.2.6",
