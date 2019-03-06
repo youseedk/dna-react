@@ -38,11 +38,17 @@ describe('<Button>', () => {
         onClick: jest.fn(),
       })
 
-      const { variant, disabled, className } = component.props()
+      const {
+        variant,
+        disabled,
+        className,
+        block,
+      } = component.props()
 
       expect(variant).toBe('default')
       expect(disabled).toBe(false)
       expect(className).toBe('')
+      expect(block).toBe(false)
     })
   })
 
@@ -128,6 +134,15 @@ describe('<Button>', () => {
       // https://github.com/airbnb/enzyme/issues/336
       expect(component.find('button').prop('disabled')).toBe(true)
       expect(component.find('button.ys-disabled')).toHaveLength(1)
+    })
+
+    it('Adds `ys-button--block` class if passed `block` prop', () => {
+      const component = shallowRender({
+        onClick: jest.fn(),
+        block: true,
+      })
+
+      expect(component.find('button.ys-button--block')).toHaveLength(1)
     })
   })
 

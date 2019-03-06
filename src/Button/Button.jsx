@@ -12,6 +12,7 @@ const Button = (props) => {
     disabled,
     className,
     variant,
+    block,
   } = props
 
   const buttonContent = <span className="ys-button__text">{label}</span>
@@ -22,6 +23,7 @@ const Button = (props) => {
       'ys-button',
       `ys-button--${variant}`,
       disabled && 'ys-disabled', // TODO: This feels very anti-BEM
+      block && 'ys-button--block',
       className,
     ),
   }
@@ -56,6 +58,7 @@ Button.propTypes = {
   variant: PropTypes.oneOf(['default', 'light', 'cta', 'solid-dark', 'solid-light', 'stripped-dark', 'stripped-light']),
   disabled: PropTypes.bool,
   className: PropTypes.string,
+  block: PropTypes.bool,
 }
 /* eslint-enable react/require-default-props */
 
@@ -63,6 +66,7 @@ Button.defaultProps = {
   variant: 'default',
   disabled: false,
   className: '',
+  block: false,
 }
 
 export default Button

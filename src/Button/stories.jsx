@@ -25,6 +25,7 @@ storiesOf('Button', module)
       variant={select('Variant', variantOptions, variantOptions.default)}
       onClick={action('click')}
       disabled={boolean('Disabled', false)}
+      block={boolean('Block', false)}
     />
   ))
   .add('Link', () => (
@@ -33,5 +34,6 @@ storiesOf('Button', module)
       variant={select('Variant', variantOptions, variantOptions.default)}
       href={text('URL', 'https://yousee.dk')}
       disabled={boolean('Disabled', false)}
+      block={boolean('Block', false)}
     />
   ))
