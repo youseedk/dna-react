@@ -1,4 +1,7 @@
 import Button from './Button'
+import Splash from './Splash'
 
-// eslint-disable-next-line import/prefer-default-export
-export { Button }
+export {
+  Button,
+  Splash,
+}

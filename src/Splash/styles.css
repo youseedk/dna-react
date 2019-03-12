@@ -1,0 +1,30 @@
+@charset "UTF-8";
+@import "../base.css";
+
+/* line 5, src/assets/scss/elements/_splash.scss */
+.ys-splash {
+  display: inline-flex;
+  flex-flow: column;
+  justify-content: center;
+  height: 5.5rem;
+  padding: 0 1.25rem;
+  background-color: #ffb700;
+  color: #fff;
+  border-radius: 8px; }
+  /* line 17, src/assets/scss/elements/_splash.scss */
+  .ys-splash__price {
+    display: block;
+    font-size: 3rem;
+    line-height: 1;
+    font-weight: 700;
+    text-align: right; }
+  /* line 25, src/assets/scss/elements/_splash.scss */
+  .ys-splash__desc {
+    display: block;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    font-weight: 600;
+    color: #484848; }
+  /* line 33, src/assets/scss/elements/_splash.scss */
+  .ys-splash--blue {
+    background-color: #27a4d7; }
