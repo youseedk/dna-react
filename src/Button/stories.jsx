@@ -15,25 +15,27 @@ const variantOptions = {
   'stripped-dark': 'stripped-dark',
   'stripped-light': 'stripped-light',
 }
-const labelOptions = ['Label', 'Label text']
+const labelOptions = ['label', 'Label text']
 
 storiesOf('Button', module)
   .addParameters({ jest: ['Button'] })
   .add('Default', () => (
     <Button
       label={text(...labelOptions)}
-      variant={select('Variant', variantOptions, variantOptions.default)}
-      onClick={action('click')}
-      disabled={boolean('Disabled', false)}
-      block={boolean('Block', false)}
+      variant={select('variant', variantOptions, variantOptions.default)}
+      onClick={action('onClick')}
+      disabled={boolean('disabled', false)}
+      block={boolean('block', false)}
+      className={text('className')}
     />
   ))
   .add('Link', () => (
     <Button
       label={text(...labelOptions)}
-      variant={select('Variant', variantOptions, variantOptions.default)}
-      href={text('URL', 'https://yousee.dk')}
-      disabled={boolean('Disabled', false)}
-      block={boolean('Block', false)}
+      variant={select('variant', variantOptions, variantOptions.default)}
+      href={text('href', 'https://yousee.dk')}
+      disabled={boolean('disabled', false)}
+      block={boolean('block', false)}
+      className={text('className')}
     />
   ))
