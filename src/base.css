@@ -1,6 +1,5 @@
-@charset "UTF-8";
+@import '~@youseedk/dna/css/base/ys-base.css';
 
-/* IMPORT WEBFONTS HERE so elements can be used with different font loading strategies */
 @font-face {
   font-family: 'Etica';
   src: url("//s.c.dk/fonts/lft_etica_light-webfont.woff2") format("woff2"), url("//s.c.dk/fonts/lft_etica_light-webfont.woff") format("woff");
@@ -28,18 +27,3 @@
   font-weight: 700;
   font-style: normal;
   font-display: swap; }
-
-
-/* Typography rules - reused for classes and rich text stuff */
-/**
- *
- *	Variables
- *
- */
-/* "foundation" file including utils*/
-/* line 1, src/assets/scss/_base.scss */
-[class*='ys'],
-[class*='ys']::before,
-[class*='ys']::after {
-  box-sizing: border-box;
-  font-family: "Etica", arial, helvetica, sans-serif; }

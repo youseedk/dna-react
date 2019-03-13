@@ -2,7 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
-import './styles.css'
+import '../base.css'
+import '@youseedk/dna/css/elements/ys-splash.css'
 
 const Splash = (props) => {
   const {
