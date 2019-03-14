@@ -31,8 +31,10 @@
       "enzyme-to-json/serializer"
     ],
     "transform": {
-      "^.+\\.jsx?$": "babel-jest",
-      ".+\\.(css|scss)$": "jest-transform-stub"
+      "^.+\\.jsx?$": "babel-jest"
+    },
+    "moduleNameMapper": {
+      "^.+.css$": "jest-transform-stub"
     },
     "coverageDirectory": "./coverage/",
     "collectCoverageFrom": [
