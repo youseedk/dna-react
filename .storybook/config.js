@@ -1,6 +1,6 @@
 import { configure, addDecorator } from '@storybook/react'
 import { withKnobs } from '@storybook/addon-knobs'
-import centered from '@storybook/addon-centered'
+import centered from '@storybook/addon-centered/react'
 import { withTests } from '@storybook/addon-jest'
 
 import results from '../.jest-test-results.json'
