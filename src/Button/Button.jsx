@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
@@ -14,9 +14,28 @@ const Button = (props) => {
     className,
     variant,
     block,
+    icon: Icon,
   } = props
 
-  const buttonContent = <span className="ys-button__text">{label}</span>
+  const buttonContent = (
+    <Fragment>
+      <span
+        className="ys-button__text"
+      >
+        {label}
+      </span>
+      {Icon
+        && (
+          <span
+            className="ys-button__icon"
+            aria-hidden="true"
+          >
+            <Icon className="ys-icon" />
+          </span>
+        )
+      }
+    </Fragment>
+  )
 
   const wrapperProps = {
     disabled,
@@ -25,6 +44,7 @@ const Button = (props) => {
       `ys-button--${variant}`,
       disabled && 'ys-disabled', // TODO: This feels very anti-BEM
       block && 'ys-button--block',
+      Icon && 'ys-button--icon',
       className,
     ),
   }
@@ -60,6 +80,7 @@ Button.propTypes = {
   disabled: PropTypes.bool,
   className: PropTypes.string,
   block: PropTypes.bool,
+  icon: PropTypes.func,
 }
 /* eslint-enable react/require-default-props */
 
@@ -68,6 +89,7 @@ Button.defaultProps = {
   disabled: false,
   className: '',
   block: false,
+  icon: null,
 }
 
 export default Button
