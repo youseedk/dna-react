@@ -15,12 +15,16 @@ const Button = (props) => {
     variant,
     block,
     icon: Icon,
+    iconOnly,
   } = props
 
   const buttonContent = (
     <Fragment>
       <span
-        className="ys-button__text"
+        className={classNames(
+          'ys-button__text',
+          iconOnly && 'ys-u-visuallyhidden',
+        )}
       >
         {label}
       </span>
@@ -44,7 +48,8 @@ const Button = (props) => {
       `ys-button--${variant}`,
       disabled && 'ys-disabled', // TODO: This feels very anti-BEM
       block && 'ys-button--block',
-      Icon && 'ys-button--icon',
+      Icon && !iconOnly && 'ys-button--icon',
+      iconOnly && 'ys-button--icon-only',
       className,
     ),
   }
@@ -81,6 +86,7 @@ Button.propTypes = {
   className: PropTypes.string,
   block: PropTypes.bool,
   icon: PropTypes.func,
+  iconOnly: PropTypes.bool,
 }
 /* eslint-enable react/require-default-props */
 
@@ -90,6 +96,7 @@ Button.defaultProps = {
   className: '',
   block: false,
   icon: null,
+  iconOnly: false,
 }
 
 export default Button

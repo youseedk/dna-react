@@ -59,6 +59,7 @@ describe('<Button>', () => {
         className,
         block,
         icon,
+        iconOnly,
       } = component.props()
 
       expect(variant).toBe('default')
@@ -66,6 +67,7 @@ describe('<Button>', () => {
       expect(className).toBe('')
       expect(block).toBe(false)
       expect(icon).toBe(null)
+      expect(iconOnly).toBe(false)
     })
   })
 
@@ -162,33 +164,58 @@ describe('<Button>', () => {
       expect(component.find('button.ys-button--block')).toHaveLength(1)
     })
 
-    it('Doesn\'t render the icon container nor classes unless passed `icon` prop', () => {
-      const component = shallowRender({
-        onClick: jest.fn(),
+    describe('Icons', () => {
+      // 'ys-button--icon'
+
+      it('Doesn\'t render the icon container nor classes unless passed `icon` prop', () => {
+        const component = shallowRender({
+          onClick: jest.fn(),
+        })
+
+        expect(component.find('button.ys-button--icon').exists()).toBe(false)
+        expect(component.find('.ys-button__icon').exists()).toBe(false)
       })
 
-      expect(component.find('button.ys-button--icon').exists()).toBe(false)
-      expect(component.find('.ys-button__icon').exists()).toBe(false)
-    })
+      it('Correctly renders icons in the <button> element', () => {
+        const component = shallowRender({
+          onClick: jest.fn(),
+          icon: dummyIcon,
+        })
 
-    it('Correctly renders icons in the <button> element', () => {
-      const component = shallowRender({
-        onClick: jest.fn(),
-        icon: dummyIcon,
+        expect(component.find('.ys-button--icon').exists()).toBe(true)
+        expect(component.find('.ys-button__icon .ys-icon').exists()).toBe(true)
       })
 
-      expect(component.find('.ys-button--icon').exists()).toBe(true)
-      expect(component.find('.ys-button__icon .ys-icon').exists()).toBe(true)
-    })
+      it('Correctly renders icons in the <a> element', () => {
+        const component = shallowRender({
+          href: 'https://yousee.dk',
+          icon: dummyIcon,
+        })
 
-    it('Correctly renders icons in the <a> element', () => {
-      const component = shallowRender({
-        href: 'https://yousee.dk',
-        icon: dummyIcon,
+        expect(component.find('.ys-button--icon').exists()).toBe(true)
+        expect(component.find('.ys-button__icon .ys-icon').exists()).toBe(true)
       })
 
-      expect(component.find('.ys-button--icon').exists()).toBe(true)
-      expect(component.find('.ys-button__icon .ys-icon').exists()).toBe(true)
+      it('Doesn\'t add `ys-button--icon` class if passed `iconOnly` prop', () => {
+        const component = shallowRender({
+          onClick: jest.fn(),
+          icon: dummyIcon,
+          iconOnly: true,
+        })
+
+        expect(component.find('.ys-button--icon').exists()).toBe(false)
+      })
+
+      it('Adds needed classes if passed `iconOnly` prop', () => {
+        const component = shallowRender({
+          onClick: jest.fn(),
+          icon: dummyIcon,
+          iconOnly: true,
+        })
+
+        expect(component.find('.ys-button.ys-button--icon-only').exists()).toBe(true)
+        expect(component.find('.ys-button__text.ys-u-visuallyhidden').exists()).toBe(true)
+      })
     })
   })
 
