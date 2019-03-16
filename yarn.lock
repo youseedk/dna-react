@@ -1358,7 +1358,7 @@
     merge-deep "^3.0.2"
     svgo "^1.1.1"
 
-"@svgr/webpack@^4.0.3":
+"@svgr/webpack@^4.0.3", "@svgr/webpack@^4.1.0":
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/@svgr/webpack/-/webpack-4.1.0.tgz#20c88f32f731c7b1d4711045b2b993887d731c28"
   dependencies:
@@ -5475,6 +5475,10 @@ jest-snapshot@^24.1.0:
     natural-compare "^1.4.0"
     pretty-format "^24.0.0"
     semver "^5.5.0"
+
+jest-svg-transformer@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/jest-svg-transformer/-/jest-svg-transformer-1.0.0.tgz#e38884ca4cd8b2295cdfa2a0b24667920c3a8a6d"
 
 jest-util@^24.0.0:
   version "24.0.0"
