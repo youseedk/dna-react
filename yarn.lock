@@ -959,14 +959,6 @@
     react-inspector "^2.3.0"
     uuid "^3.3.2"
 
-"@storybook/addon-centered@^5.0.0":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-centered/-/addon-centered-5.0.0.tgz#eb7b348d005b2a0e646ce0fd48b261b143e2235c"
-  dependencies:
-    core-js "^2.6.2"
-    global "^4.3.2"
-    util-deprecate "^1.0.2"
-
 "@storybook/addon-jest@^5.0.0":
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/@storybook/addon-jest/-/addon-jest-5.0.0.tgz#1564871f8e9fbb6002bfdb62459b868610baea2a"
@@ -5475,10 +5467,6 @@ jest-snapshot@^24.1.0:
     natural-compare "^1.4.0"
     pretty-format "^24.0.0"
     semver "^5.5.0"
-
-jest-svg-transformer@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/jest-svg-transformer/-/jest-svg-transformer-1.0.0.tgz#e38884ca4cd8b2295cdfa2a0b24667920c3a8a6d"
 
 jest-util@^24.0.0:
   version "24.0.0"
