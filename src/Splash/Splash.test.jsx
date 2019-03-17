@@ -60,9 +60,9 @@ describe('<Splash>', () => {
         description: '/md i 24 mdr.',
       })
 
-      expect(component.find('div.ys-splash')).toHaveLength(1)
-      expect(component.find('strong.ys-splash__price')).toHaveLength(1)
-      expect(component.find('small.ys-splash__desc')).toHaveLength(1)
+      expect(component.find('div.ys-splash').exists()).toBe(true)
+      expect(component.find('strong.ys-splash__price').exists()).toBe(true)
+      expect(component.find('small.ys-splash__desc').exists()).toBe(true)
     })
 
     it('Displays the suffixed price', () => {
@@ -83,7 +83,7 @@ describe('<Splash>', () => {
     it('Doesn\'t render the description block if no `description` prop is passed', () => {
       const component = shallowRender()
 
-      expect(component.find('.ys-splash__desc')).toHaveLength(0)
+      expect(component.find('.ys-splash__desc').exists()).toBe(false)
     })
 
     it('Custom `className` is being applied to the container', () => {
@@ -92,7 +92,7 @@ describe('<Splash>', () => {
         className: customClassName,
       })
 
-      expect(component.find(`.ys-splash.${customClassName}`)).toHaveLength(1)
+      expect(component.find(`.ys-splash.${customClassName}`).exists()).toBe(true)
     })
 
     it('Supports and adds the correct `color` class to the container', () => {
@@ -103,7 +103,7 @@ describe('<Splash>', () => {
           color,
         })
 
-        expect(component.find(`.ys-splash.ys-splash--${color}`)).toHaveLength(1)
+        expect(component.find(`.ys-splash.ys-splash--${color}`).exists()).toBe(true)
       })
     })
   })

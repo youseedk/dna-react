@@ -77,7 +77,7 @@ describe('<Button>', () => {
         onClick: jest.fn(),
       })
 
-      expect(component.find('button')).toHaveLength(1)
+      expect(component.find('button').exists()).toBe(true)
     })
 
     it('Outputs an <a> element when passed a `href` prop', () => {
@@ -110,7 +110,7 @@ describe('<Button>', () => {
         onClick: jest.fn(),
       })
 
-      expect(component.find('.ys-button')).toHaveLength(1)
+      expect(component.find('.ys-button').exists()).toBe(true)
     })
 
     it('<a> element has the `ys-button` and `ys-button__text` default classes', () => {
@@ -118,7 +118,7 @@ describe('<Button>', () => {
         href: 'https://yousee.dk',
       })
 
-      expect(component.find('.ys-button .ys-button__text')).toHaveLength(1)
+      expect(component.find('.ys-button .ys-button__text').exists()).toBe(true)
     })
 
     it('Custom `className` is being applied to the container', () => {
@@ -128,7 +128,7 @@ describe('<Button>', () => {
         className: customClassName,
       })
 
-      expect(component.find(`.ys-button.${customClassName}`)).toHaveLength(1)
+      expect(component.find(`.ys-button.${customClassName}`).exists()).toBe(true)
     })
 
     it('Supports and adds the correct `variant` class to the container', () => {
@@ -140,7 +140,7 @@ describe('<Button>', () => {
           variant,
         })
 
-        expect(component.find(`.ys-button.ys-button--${variant}`)).toHaveLength(1)
+        expect(component.find(`.ys-button.ys-button--${variant}`).exists()).toBe(true)
       })
     })
 
@@ -152,7 +152,7 @@ describe('<Button>', () => {
 
       // https://github.com/airbnb/enzyme/issues/336
       expect(component.find('button').prop('disabled')).toBe(true)
-      expect(component.find('button.ys-disabled')).toHaveLength(1)
+      expect(component.find('button.ys-disabled').exists()).toBe(true)
     })
 
     it('Adds `ys-button--block` class if passed `block` prop', () => {
@@ -161,7 +161,7 @@ describe('<Button>', () => {
         block: true,
       })
 
-      expect(component.find('button.ys-button--block')).toHaveLength(1)
+      expect(component.find('button.ys-button--block').exists()).toBe(true)
     })
 
     describe('Icons', () => {
