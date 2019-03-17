@@ -4,6 +4,7 @@ import classNames from 'classnames'
 
 import '../base.css'
 import '@youseedk/dna/css/elements/ys-button.css'
+import '@youseedk/dna/css/icons/ys-icons.css'
 
 const Button = (props) => {
   const {

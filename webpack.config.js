@@ -1,4 +1,5 @@
 const path = require('path')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
   entry: './src/index.js',
@@ -15,7 +16,10 @@ module.exports = {
           path.resolve(__dirname, 'src'),
           path.resolve(__dirname, 'node_modules/@youseedk'),
         ],
-        use: ['style-loader', 'css-loader'],
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+        ],
       },
       {
         test: /\.svg$/,
@@ -37,6 +41,9 @@ module.exports = {
     filename: 'index.js',
     libraryTarget: 'umd',
   },
+  plugins: [
+    new MiniCssExtractPlugin(),
+  ],
   externals: {
     react: {
       root: 'React',
