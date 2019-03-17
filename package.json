@@ -1,8 +1,11 @@
 {
   "name": "ys-react",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "React library for the YouSee design system",
   "main": "lib/index.js",
+  "sideEffects": [
+    "*.css"
+  ],
   "scripts": {
     "test": "jest",
     "test:coverage": "npm run test -- --coverage",
