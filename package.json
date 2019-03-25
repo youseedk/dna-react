@@ -11,7 +11,7 @@
     "test:coverage": "npm run test -- --coverage",
     "test:watch": "npm run test -- --watch",
     "test:generate-output": "npm run test -- --json --outputFile=.jest-test-results.json || true",
-    "build": "webpack --mode production",
+    "build": "BABEL_ENV=production webpack --mode production",
     "prebuild:storybook": "npm run test:generate-output",
     "storybook": "start-storybook -p 9001",
     "deploy-storybook": "storybook-to-ghpages"
@@ -65,6 +65,7 @@
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.1.0",
     "babel-loader": "^8.0.5",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
     "codecov": "^3.2.0",
     "css-loader": "^2.1.0",
     "enzyme": "^3.9.0",
