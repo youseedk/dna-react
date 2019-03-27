@@ -18,14 +18,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/havgry/ys-react.git"
+    "url": "git+https://github.com/youseedk/dna-react.git"
   },
   "author": "Magnus Havgry",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/havgry/ys-react/issues"
+    "url": "https://github.com/youseedk/dna-react/issues"
   },
-  "homepage": "https://github.com/havgry/ys-react#readme",
+  "homepage": "https://github.com/youseedk/dna-react#readme",
   "jest": {
     "setupFilesAfterEnv": [
       "<rootDir>/src/setupTests.js"
