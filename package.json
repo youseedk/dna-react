@@ -1,6 +1,6 @@
 {
   "name": "ys-react",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "React library for the YouSee design system",
   "main": "lib/index.js",
   "module": "lib/es/index.js",
