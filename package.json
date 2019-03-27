@@ -51,6 +51,7 @@
     ]
   },
   "dependencies": {
+    "@babel/runtime": "^7.4.2",
     "@youseedk/dna": "^0.36.0-0",
     "classnames": "^2.2.6",
     "prop-types": "^15.7.2"
@@ -59,6 +60,8 @@
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.3.3",
     "@babel/plugin-proposal-class-properties": "^7.3.3",
+    "@babel/plugin-proposal-export-default-from": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.4.0",
     "@babel/preset-env": "^7.3.1",
     "@babel/preset-react": "^7.0.0",
     "@storybook/addon-actions": "^5.0.0",
@@ -71,6 +74,7 @@
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.1.0",
     "babel-loader": "^8.0.5",
+    "babel-plugin-add-module-exports": "^1.0.0",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
     "codecov": "^3.2.0",
     "css-loader": "^2.1.0",

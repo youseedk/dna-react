@@ -10,8 +10,8 @@ const clean = () => fse.existsSync(libRoot) && fse.removeSync(libRoot)
 
 const shell = cmd => execa.shell(cmd, { stdio: ['pipe', 'pipe', 'inherit'] })
 
-const buildLib = async () => {
-  await shell(`npx babel ${srcRoot} --out-dir ${libRoot} --env-name "lib" --copy-files`)
+const buildCjs = async () => {
+  await shell(`npx babel ${srcRoot} --out-dir ${libRoot} --env-name "cjs" --copy-files`)
 }
 
 const buildEsm = async () => {
@@ -21,7 +21,7 @@ const buildEsm = async () => {
 clean()
 
 Promise.all([
-  buildLib(),
+  buildCjs(),
   buildEsm(),
 ]).catch((err) => {
   if (err) {
