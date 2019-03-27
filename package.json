@@ -2,7 +2,8 @@
   "name": "ys-react",
   "version": "0.0.10",
   "description": "React library for the YouSee design system",
-  "main": "lib/index.js",
+  "main": "index.js",
+  "module": "es/index.js",
   "sideEffects": [
     "*.css"
   ],
