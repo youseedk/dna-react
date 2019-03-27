@@ -11,10 +11,11 @@
     "test:coverage": "npm run test -- --coverage",
     "test:watch": "npm run test -- --watch",
     "test:generate-output": "npm run test -- --json --outputFile=.jest-test-results.json || true",
-    "build": "BABEL_ENV=production webpack --mode production",
+    "build": "node tools/build.js",
     "prebuild:storybook": "npm run test:generate-output",
     "storybook": "start-storybook -p 9001",
-    "deploy-storybook": "storybook-to-ghpages"
+    "deploy-storybook": "storybook-to-ghpages",
+    "build:dist": "BABEL_ENV=production webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -31,7 +32,7 @@
   "homepage": "https://github.com/youseedk/dna-react#readme",
   "jest": {
     "setupFilesAfterEnv": [
-      "<rootDir>/src/setupTests.js"
+      "<rootDir>/tools/setupTests.js"
     ],
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
@@ -54,6 +55,7 @@
     "prop-types": "^15.7.2"
   },
   "devDependencies": {
+    "@babel/cli": "^7.2.3",
     "@babel/core": "^7.3.3",
     "@babel/plugin-proposal-class-properties": "^7.3.3",
     "@babel/preset-env": "^7.3.1",
@@ -81,6 +83,8 @@
     "eslint-plugin-jest": "^22.3.0",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.12.4",
+    "execa": "^1.0.0",
+    "fs-extra": "^7.0.1",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.1.0",
     "mini-css-extract-plugin": "^0.5.0",
