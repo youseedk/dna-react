@@ -25,6 +25,9 @@
   "bugs": {
     "url": "https://github.com/youseedk/dna-react/issues"
   },
+  "files": [
+    "lib"
+  ],
   "homepage": "https://github.com/youseedk/dna-react#readme",
   "jest": {
     "setupFilesAfterEnv": [
