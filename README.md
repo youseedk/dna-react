@@ -1,11 +1,20 @@
-# dna-react
+![YouSee DNA React logo](logo.svg)
+
 [![Build Status](https://travis-ci.com/havgry/ys-react.svg?branch=master)](https://travis-ci.com/havgry/ys-react) [![codecov](https://codecov.io/gh/havgry/ys-react/branch/master/graph/badge.svg)](https://codecov.io/gh/havgry/ys-react) [![npm version](https://badge.fury.io/js/ys-react.svg)](//npmjs.com/package/ys-react)
 
-React component library implementing [YouSee DNA](https://github.com/youseedk/dna). At this point in time, consider it a proof of concept of a component-based implementation distributed with npm (no Sitecore dependencies whatsoever) and documented in Storybook.
+React component library implementing [YouSee DNA](https://github.com/youseedk/dna). It's merely a React implementation of YouSee DNA meaning that bugs regarding styling/markup, feature requests for new components or component variants should be directed towards [YouSee DNA](https://github.com/youseedk/dna/issues).
 
 ## Installation and use
 
-`yarn add ys-react` or `npm i ys-react`. Currently only a button component is available and can be used like so:
+```
+yarn add ys-react
+```
+
+```
+npm i ys-react
+```
+
+### Example
 
 ```
 import React from 'react'
@@ -23,6 +32,7 @@ const MyComponent = () => (
 
 export default MyComponent
 ```
+All components and icons can be imported as ES6 and CommonJS modules.
 
 ### Peer dependencies
 
