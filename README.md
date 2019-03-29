@@ -1,6 +1,6 @@
 ![YouSee DNA React logo](logo.svg)
 
-[![Build Status](https://travis-ci.com/havgry/ys-react.svg?branch=master)](https://travis-ci.com/havgry/ys-react) [![codecov](https://codecov.io/gh/havgry/ys-react/branch/master/graph/badge.svg)](https://codecov.io/gh/havgry/ys-react) [![npm version](https://badge.fury.io/js/ys-react.svg)](//npmjs.com/package/ys-react)
+[![Build Status](https://travis-ci.com/havgry/ys-react.svg?branch=master)](https://travis-ci.com/havgry/ys-react) [![codecov](https://codecov.io/gh/havgry/ys-react/branch/master/graph/badge.svg)](https://codecov.io/gh/havgry/ys-react) [![npm version](https://badge.fury.io/js/%40youseedk%2Fdna-react.svg)](https://badge.fury.io/js/%40youseedk%2Fdna-react)
 
 React component library implementing [YouSee DNA](https://github.com/youseedk/dna). It's merely a React implementation of YouSee DNA meaning that bugs regarding styling/markup, feature requests for new components or component variants should be directed towards [YouSee DNA](https://github.com/youseedk/dna/issues).
 
