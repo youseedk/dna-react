@@ -7,18 +7,18 @@ React component library implementing [YouSee DNA](https://github.com/youseedk/dn
 ## Installation and use
 
 ```
-yarn add ys-react
+yarn add @youseedk/dna-react
 ```
 
 ```
-npm i ys-react
+npm i @youseedk/dna-react
 ```
 
 ### Example
 
 ```
 import React from 'react'
-import { Button } from 'ys-react'
+import { Button } from '@youseedk/dna-react'
 
 const MyComponent = () => (
   <div>
