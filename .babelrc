@@ -1,5 +1,5 @@
 {
-  "presets": ["@babel/preset-react"],
+  "presets": ["@babel/preset-react", "@babel/preset-env"],
   "plugins": [
     "@babel/plugin-proposal-class-properties",
     "@babel/plugin-proposal-export-default-from",
@@ -15,7 +15,6 @@
     "esm": {
       "presets": [
         [
-          "@babel/preset-env",
           {
             "modules": false,
             "include": ["proposal-object-rest-spread"]
@@ -27,12 +26,15 @@
           "@babel/plugin-transform-runtime",
           { "useESModules": true }
         ],
+      ],
+      "ignore": [
+        "**/*.test.jsx",
+        "**/stories.jsx"
       ]
     },
     "cjs": {
       "presets": [
         [
-          "@babel/preset-env",
           {
             "modules": "cjs",
             "include": ["proposal-object-rest-spread"]
@@ -45,11 +47,11 @@
           "@babel/plugin-transform-runtime",
           { "useESModules": false }
         ]
+      ],
+      "ignore": [
+        "**/*.test.jsx",
+        "**/stories.jsx"
       ]
     }
-  },
-  "ignore": [
-    "**/*.test.jsx",
-    "**/stories.jsx"
-  ]
+  }
 }
