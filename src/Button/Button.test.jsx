@@ -144,7 +144,7 @@ describe('<Button>', () => {
       })
     })
 
-    it('Adds `disabled` attribute and `ys-disabled` class if passed as prop', () => {
+    it('Adds `disabled` attribute and `ys-button--disabled` class if passed as prop', () => {
       const component = shallowRender({
         onClick: jest.fn(),
         disabled: true,
@@ -152,7 +152,7 @@ describe('<Button>', () => {
 
       // https://github.com/airbnb/enzyme/issues/336
       expect(component.find('button').prop('disabled')).toBe(true)
-      expect(component.find('button.ys-disabled').exists()).toBe(true)
+      expect(component.find('button.ys-button--disabled').exists()).toBe(true)
     })
 
     it('Adds `ys-button--block` class if passed `block` prop', () => {
