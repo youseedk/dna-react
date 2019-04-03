@@ -47,7 +47,7 @@ const Button = (props) => {
     className: classNames(
       'ys-button',
       `ys-button--${variant}`,
-      disabled && 'ys-disabled', // TODO: This feels very anti-BEM
+      disabled && 'ys-button--disabled',
       block && 'ys-button--block',
       Icon && !iconOnly && 'ys-button--icon',
       iconOnly && 'ys-button--icon-only',
