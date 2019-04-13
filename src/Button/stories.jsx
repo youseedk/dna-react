@@ -5,20 +5,7 @@ import { text, boolean, select } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
 
 import Button from './Button'
-import {
-  IconUIArrowDown,
-  IconUIArrowLeft,
-  IconUIArrowRight,
-  IconUIArrowUp,
-  IconUICheckMark,
-  IconUIErase,
-  IconUIExclamationMark,
-  IconUIEyeClosed,
-  IconUIEyeOpen,
-  IconUILogo,
-  IconUIMultiplication,
-  IconUIPlus,
-} from '..'
+import { uiIcons as icons } from '../utils/iconMapper'
 
 const variants = {
   default: 'default',
@@ -28,22 +15,6 @@ const variants = {
   'solid-light': 'solid-light',
   'stripped-dark': 'stripped-dark',
   'stripped-light': 'stripped-light',
-}
-
-const icons = {
-  none: null,
-  'ui-arrow-down': IconUIArrowDown,
-  'ui-arrow-left': IconUIArrowLeft,
-  'ui-arrow-right': IconUIArrowRight,
-  'ui-arrow-up': IconUIArrowUp,
-  'ui-check-mark': IconUICheckMark,
-  'ui-erase': IconUIErase,
-  'ui-exclamation-mark': IconUIExclamationMark,
-  'ui-eye-closed': IconUIEyeClosed,
-  'ui-eye-open': IconUIEyeOpen,
-  'ui-logo': IconUILogo,
-  'ui-multiplication': IconUIMultiplication,
-  'ui-plus': IconUIPlus,
 }
 
 const labelOptions = ['label', 'Label text', 'Content']
