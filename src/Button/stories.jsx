@@ -11,10 +11,10 @@ const variants = {
   default: 'default',
   light: 'light',
   cta: 'cta',
-  'solid-dark': 'solid-dark',
-  'solid-light': 'solid-light',
-  'stripped-dark': 'stripped-dark',
-  'stripped-light': 'stripped-light',
+  'secondary-dark': 'secondary-dark',
+  'secondary-light': 'secondary-light',
+  'tertiary-dark': 'tertiary-dark',
+  'tertiary-light': 'tertiary-light',
 }
 
 const labelOptions = ['label', 'Label text', 'Content']

@@ -82,7 +82,7 @@ Button.propTypes = {
   label: PropTypes.string.isRequired,
   onClick: PropTypes.func, // TODO: Add custom validation, as either `onClick` or `href` is required
   href: PropTypes.string,
-  variant: PropTypes.oneOf(['default', 'light', 'cta', 'solid-dark', 'solid-light', 'stripped-dark', 'stripped-light']),
+  variant: PropTypes.oneOf(['default', 'light', 'cta', 'secondary-dark', 'secondary-light', 'tertiary-dark', 'tertiary-light']),
   disabled: PropTypes.bool,
   className: PropTypes.string,
   block: PropTypes.bool,

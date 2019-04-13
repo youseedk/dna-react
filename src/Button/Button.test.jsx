@@ -132,7 +132,7 @@ describe('<Button>', () => {
     })
 
     it('Supports and adds the correct `variant` class to the container', () => {
-      const variants = ['default', 'light', 'cta', 'solid-dark', 'solid-light', 'stripped-dark', 'stripped-light']
+      const variants = ['default', 'light', 'cta', 'secondary-dark', 'secondary-light', 'tertiary-dark', 'tertiary-light']
 
       variants.forEach((variant) => {
         const component = shallowRender({
