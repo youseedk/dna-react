@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Notification> Rendering Snapshots With custom props 1`] = `
+<div
+  className="ys-notification ys-notification--success sparrow"
+>
+  <span
+    aria-hidden="true"
+    className="ys-notification__icon"
+  >
+    <dummyIcon
+      className="ys-icon"
+    />
+  </span>
+  <div
+    className="ys-notification__content"
+  >
+    <NotificationText
+      className=""
+    >
+      Notification message
+    </NotificationText>
+  </div>
+</div>
+`;
+
+exports[`<Notification> Rendering Snapshots With default props 1`] = `
+<div
+  className="ys-notification ys-notification--info"
+>
+  <span
+    aria-hidden="true"
+    className="ys-notification__icon"
+  >
+    <IconUIExclamationMark
+      className="ys-icon"
+      viewBox="-7 -1 16 16"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  </span>
+  <div
+    className="ys-notification__content"
+  >
+    <NotificationText
+      className=""
+    >
+      Notification message
+    </NotificationText>
+  </div>
+</div>
+`;

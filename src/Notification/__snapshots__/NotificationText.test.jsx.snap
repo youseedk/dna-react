@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NotificationText> Snapshots With custom \`className\` 1`] = `
+<p
+  className="ys-notification__text parrot"
+>
+  Notification message
+</p>
+`;
+
+exports[`<NotificationText> Snapshots Without custom \`className\` 1`] = `
+<p
+  className="ys-notification__text"
+>
+  Notification message
+</p>
+`;

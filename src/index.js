@@ -165,11 +165,13 @@ import IconYouseeMore from '@youseedk/dna/svg/icon-set/yousee-more.svg'
 
 // Components
 import Button from './Button'
+import Notification from './Notification'
 import Splash from './Splash'
 import Tag from './Tag'
 
 export {
   Button,
+  Notification,
   Splash,
   Tag,
   IconUIArrowDown,
