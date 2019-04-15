@@ -17,26 +17,26 @@ const mount = props => mountComponent(getSplash(props))
 describe('<Splash>', () => {
   describe('Props', () => {
     it('Throws propType warning if no `price` prop is passed', () => {
-      const componentShallowRender = () => shallowRender({
+      const component = () => shallowRender({
         price: null,
       })
-      expect(componentShallowRender).toThrow()
+      expect(component).toThrow()
     })
 
     it('Throws propType warning if unsupported `color` prop is passed', () => {
-      const componentShallowRender = () => shallowRender({
+      const component = () => shallowRender({
         color: 'red',
       })
 
-      expect(componentShallowRender).toThrow()
+      expect(component).toThrow()
     })
 
     it('Throws propType warning if `price` prop is passed as string', () => {
-      const componentShallowRender = () => shallowRender({
+      const component = () => shallowRender({
         price: '149,99',
       })
 
-      expect(componentShallowRender).toThrow()
+      expect(component).toThrow()
     })
 
     it('Has correct defaultProps', () => {

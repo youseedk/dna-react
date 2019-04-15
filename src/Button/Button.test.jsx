@@ -18,20 +18,20 @@ const mount = props => mountComponent(getButton(props))
 describe('<Button>', () => {
   describe('Props', () => {
     it('Throws propType warning if no `label` prop is passed', () => {
-      const componentShallowRender = () => shallowRender({
+      const component = () => shallowRender({
         href: 'https://yousee.dk',
         label: null,
       })
-      expect(componentShallowRender).toThrow()
+      expect(component).toThrow()
     })
 
     it('Throws propType warning if unsupported `variant` prop is passed', () => {
-      const componentShallowRender = () => shallowRender({
+      const component = () => shallowRender({
         href: 'https://yousee.dk',
         variant: 'invisible',
       })
 
-      expect(componentShallowRender).toThrow()
+      expect(component).toThrow()
     })
 
     it('Has correct defaultProps', () => {

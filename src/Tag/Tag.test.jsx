@@ -18,10 +18,10 @@ const mount = props => mountComponent(getTag(props))
 describe('<Tag>', () => {
   describe('Props', () => {
     it('Throws propType warning if no `label` prop is passed', () => {
-      const componentShallowRender = () => shallowRender({
+      const component = () => shallowRender({
         label: null,
       })
-      expect(componentShallowRender).toThrow()
+      expect(component).toThrow()
     })
 
     it('Has correct defaultProps', () => {
