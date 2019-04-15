@@ -165,8 +165,6 @@ describe('<Button>', () => {
     })
 
     describe('Icons', () => {
-      // 'ys-button--icon'
-
       it('Doesn\'t render the icon container nor classes unless passed `icon` prop', () => {
         const component = shallowRender({
           onClick: jest.fn(),

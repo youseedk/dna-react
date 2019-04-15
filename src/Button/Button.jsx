@@ -86,7 +86,7 @@ Button.propTypes = {
   disabled: PropTypes.bool,
   className: PropTypes.string,
   block: PropTypes.bool,
-  icon: PropTypes.func,
+  icon: PropTypes.elementType,
   iconOnly: PropTypes.bool,
 }
 /* eslint-enable react/require-default-props */
