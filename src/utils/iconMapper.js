@@ -165,7 +165,7 @@ import {
 } from '..'
 
 export const uiIcons = {
-  none: null,
+  none: undefined,
   'ui-arrow-down': IconUIArrowDown,
   'ui-arrow-left': IconUIArrowLeft,
   'ui-arrow-right': IconUIArrowRight,
@@ -181,7 +181,7 @@ export const uiIcons = {
 }
 
 export const setIcons = {
-  none: null,
+  none: undefined,
   'add-to-playlist': IconAddToPlaylist,
   'additional-packages': IconAdditionalPackages,
   airplay: IconAirplay,
