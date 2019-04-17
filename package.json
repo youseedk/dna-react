@@ -15,8 +15,7 @@
     "build": "node tools/build.js",
     "prebuild:storybook": "npm run test:generate-output",
     "storybook": "start-storybook -p 9001",
-    "deploy-storybook": "storybook-to-ghpages",
-    "build:dist": "BABEL_ENV=production webpack --mode production"
+    "deploy-storybook": "storybook-to-ghpages"
   },
   "repository": {
     "type": "git",
