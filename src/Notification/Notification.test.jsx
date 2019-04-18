@@ -2,7 +2,7 @@ import React from 'react'
 import { shallow, mount as mountComponent } from 'enzyme'
 
 import Notification from './Notification'
-import dummyIcon from '../utils/dummyIcon'
+import dummyIcon from '../../utils/dummyIcon'
 
 const defaultMessage = 'Notification message'
 const customClassName = 'sparrow'

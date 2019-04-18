@@ -2,7 +2,7 @@ import React from 'react'
 import { shallow, mount as mountComponent } from 'enzyme'
 
 import Button from './Button'
-import dummyIcon from '../utils/dummyIcon'
+import dummyIcon from '../../utils/dummyIcon'
 
 const defaultLabel = 'Click me!'
 const getButton = props => (

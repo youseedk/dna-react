@@ -5,7 +5,7 @@ import { text, boolean, select } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
 
 import Button from './Button'
-import { uiIcons as icons } from '../utils/iconMapper'
+import { uiIcons as icons } from '../../utils/iconMapper'
 
 const variants = {
   default: 'default',

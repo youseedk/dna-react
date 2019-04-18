@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'
 
 import { select, text, boolean } from '@storybook/addon-knobs'
 
-import { uiIcons as icons } from '../utils/iconMapper'
+import { uiIcons as icons } from '../../utils/iconMapper'
 import Notification from './Notification'
 
 const colorOptions = {
