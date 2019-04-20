@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProgressBar> Snapshots \`light\` variant 1`] = `
+<div
+  aria-valuemax={100}
+  aria-valuemin={0}
+  aria-valuenow={50}
+  aria-valuetext="50% gennemført"
+  className="ys-progress ys-progress--light"
+  role="progressbar"
+>
+  <div
+    aria-hidden="true"
+    className="ys-progress__bar"
+  >
+    <div
+      className="ys-progress__progress"
+      style={
+        Object {
+          "width": "50%",
+        }
+      }
+    >
+      <span
+        className="ys-u-visuallyhidden"
+      >
+        50% gennemført
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ProgressBar> Snapshots With custom \`className\` 1`] = `
+<div
+  aria-valuemax={100}
+  aria-valuemin={0}
+  aria-valuenow={50}
+  aria-valuetext="50% gennemført"
+  className="ys-progress badger"
+  role="progressbar"
+>
+  <div
+    aria-hidden="true"
+    className="ys-progress__bar"
+  >
+    <div
+      className="ys-progress__progress"
+      style={
+        Object {
+          "width": "50%",
+        }
+      }
+    >
+      <span
+        className="ys-u-visuallyhidden"
+      >
+        50% gennemført
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ProgressBar> Snapshots Without custom \`className\` 1`] = `
+<div
+  aria-valuemax={100}
+  aria-valuemin={0}
+  aria-valuenow={50}
+  aria-valuetext="50% gennemført"
+  className="ys-progress"
+  role="progressbar"
+>
+  <div
+    aria-hidden="true"
+    className="ys-progress__bar"
+  >
+    <div
+      className="ys-progress__progress"
+      style={
+        Object {
+          "width": "50%",
+        }
+      }
+    >
+      <span
+        className="ys-u-visuallyhidden"
+      >
+        50% gennemført
+      </span>
+    </div>
+  </div>
+</div>
+`;
