@@ -46,7 +46,7 @@ const Button = (props) => {
     disabled,
     className: classNames(
       'ys-button',
-      `ys-button--${variant}`,
+      variant && `ys-button--${variant}`,
       disabled && 'ys-button--disabled',
       block && 'ys-button--block',
       Icon && !iconOnly && 'ys-button--icon',
@@ -82,7 +82,7 @@ Button.propTypes = {
   label: PropTypes.string.isRequired,
   onClick: PropTypes.func, // TODO: Add custom validation, as either `onClick` or `href` is required
   href: PropTypes.string,
-  variant: PropTypes.oneOf(['default', 'light', 'cta', 'secondary-dark', 'secondary-light', 'tertiary-dark', 'tertiary-light']),
+  variant: PropTypes.oneOf(['light', 'cta', 'secondary-dark', 'secondary-light', 'tertiary-dark', 'tertiary-light']),
   disabled: PropTypes.bool,
   className: PropTypes.string,
   block: PropTypes.bool,
@@ -92,7 +92,7 @@ Button.propTypes = {
 /* eslint-enable react/require-default-props */
 
 Button.defaultProps = {
-  variant: 'default',
+  variant: null,
   disabled: false,
   className: '',
   block: false,
