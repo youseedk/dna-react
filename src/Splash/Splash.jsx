@@ -9,7 +9,7 @@ const Splash = (props) => {
   const {
     price,
     description,
-    color,
+    variant,
     className,
   } = props
 
@@ -17,7 +17,7 @@ const Splash = (props) => {
   const wrapperProps = {
     className: classNames(
       'ys-splash',
-      `ys-splash--${color}`, // TODO: Only `ys-splash--blue` is being used, but more colors are to be expected
+      `ys-splash--${variant}`, // TODO: Only `ys-splash--blue` is being used, but more colors are to be expected
       className,
     ),
   }
@@ -35,12 +35,12 @@ const Splash = (props) => {
 Splash.propTypes = {
   price: PropTypes.number.isRequired,
   description: PropTypes.string,
-  color: PropTypes.oneOf(['yellow', 'blue']),
+  variant: PropTypes.oneOf(['yellow', 'blue']),
   className: PropTypes.string,
 }
 
 Splash.defaultProps = {
-  color: 'yellow',
+  variant: 'yellow',
   description: '',
   className: '',
 }

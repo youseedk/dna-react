@@ -5,7 +5,7 @@ import { text, select, number } from '@storybook/addon-knobs'
 
 import Splash from './Splash'
 
-const colorOptions = {
+const variants = {
   yellow: 'yellow',
   blue: 'blue',
 }
@@ -16,7 +16,7 @@ storiesOf('Splash', module)
     <Splash
       price={number('price', 149, {}, 'Content')}
       description={text('description', '/md i 24 mdr.', 'Content')}
-      color={select('color', colorOptions, colorOptions.yellow, 'Visuals')}
+      variant={select('variant', variants, variants.yellow, 'Visuals')}
       className={text('className', '', 'Misc')}
     />
   ))

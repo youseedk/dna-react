@@ -11,7 +11,7 @@ import '@youseedk/dna/css/elements/ys-notification.css'
 
 const Notification = (props) => {
   const {
-    color,
+    variant,
     className,
     children,
     icon: Icon,
@@ -21,7 +21,7 @@ const Notification = (props) => {
   const wrapperProps = {
     className: classNames(
       'ys-notification',
-      `ys-notification--${color}`,
+      `ys-notification--${variant}`,
       className,
     ),
   }
@@ -54,14 +54,14 @@ Notification.propTypes = {
     PropTypes.arrayOf(notificationTextType),
     notificationTextType,
   ]).isRequired,
-  color: PropTypes.oneOf(['info', 'success', 'warning', 'error']),
+  variant: PropTypes.oneOf(['info', 'success', 'warning', 'error']),
   icon: PropTypes.elementType,
   displayIcon: PropTypes.bool,
   className: PropTypes.string,
 }
 
 Notification.defaultProps = {
-  color: 'info',
+  variant: 'info',
   icon: IconUIExclamationMark,
   displayIcon: true,
   className: '',

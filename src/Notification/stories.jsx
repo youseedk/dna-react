@@ -6,7 +6,7 @@ import { select, text, boolean } from '@storybook/addon-knobs'
 import { uiIcons as icons } from '../../utils/iconMapper'
 import Notification from './Notification'
 
-const colorOptions = {
+const variants = {
   info: 'info',
   success: 'success',
   warning: 'warning',
@@ -18,7 +18,7 @@ storiesOf('Notification', module)
   .addParameters({ jest: ['Notification'] })
   .add('Default', () => (
     <Notification
-      color={select('color', colorOptions, colorOptions.info, 'Visuals')}
+      variant={select('variant', variants, variants.info, 'Visuals')}
       icon={icons[select(...iconOptions)]}
       displayIcon={boolean('displayIcon', true, 'Visuals')}
       className={text('className', '', 'Misc')}

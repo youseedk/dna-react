@@ -5,7 +5,7 @@ import { text, select, number } from '@storybook/addon-knobs'
 
 import ProgressBar from './ProgressBar'
 
-const variantOptions = {
+const variants = {
   default: null,
   light: 'light',
 }
@@ -17,7 +17,7 @@ storiesOf('ProgressBar', module)
       value={number('value', 40, {}, 'Content')}
       valueMin={number('valueMin', 0, {}, 'Content')}
       valueMax={number('valueMax', 100, {}, 'Content')}
-      variant={select('variant', variantOptions, variantOptions.default, 'Visuals')}
+      variant={select('variant', variants, variants.default, 'Visuals')}
       className={text('className', '', 'Misc')}
     />
   ))

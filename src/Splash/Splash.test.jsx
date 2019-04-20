@@ -23,9 +23,9 @@ describe('<Splash>', () => {
       expect(component).toThrow()
     })
 
-    it('Throws propType warning if unsupported `color` prop is passed', () => {
+    it('Throws propType warning if unsupported `variant` prop is passed', () => {
       const component = () => shallowRender({
-        color: 'red',
+        variant: 'red',
       })
 
       expect(component).toThrow()
@@ -43,12 +43,12 @@ describe('<Splash>', () => {
       const component = mount()
 
       const {
-        color,
+        variant,
         description,
         className,
       } = component.props()
 
-      expect(color).toBe('yellow')
+      expect(variant).toBe('yellow')
       expect(description).toBe('')
       expect(className).toBe('')
     })
@@ -95,15 +95,15 @@ describe('<Splash>', () => {
       expect(component.find(`.ys-splash.${customClassName}`).exists()).toBe(true)
     })
 
-    it('Supports and adds the correct `color` class to the container', () => {
-      const colors = ['yellow', 'blue']
+    it('Supports and adds the correct `variant` class to the container', () => {
+      const variants = ['yellow', 'blue']
 
-      colors.forEach((color) => {
+      variants.forEach((variant) => {
         const component = shallowRender({
-          color,
+          variant,
         })
 
-        expect(component.find(`.ys-splash.ys-splash--${color}`).exists()).toBe(true)
+        expect(component.find(`.ys-splash.ys-splash--${variant}`).exists()).toBe(true)
       })
     })
   })

@@ -50,9 +50,9 @@ describe('<Notification>', () => {
       expect(component).toThrow()
     })
 
-    it('Throws propType warning if unsupported `color` prop is passed', () => {
+    it('Throws propType warning if unsupported `variant` prop is passed', () => {
       const component = () => shallowRender({
-        color: 'default',
+        variant: 'default',
       })
 
       expect(component).toThrow()
@@ -62,13 +62,13 @@ describe('<Notification>', () => {
       const component = mount()
 
       const {
-        color,
+        variant,
         // icon,
         displayIcon,
         className,
       } = component.props()
 
-      expect(color).toBe('info')
+      expect(variant).toBe('info')
       expect(displayIcon).toBe(true)
       expect(className).toBe('')
     })
@@ -83,15 +83,15 @@ describe('<Notification>', () => {
       expect(component.find(`.ys-notification.${customClassName}`).exists()).toBe(true)
     })
 
-    it('Supports and adds the correct `color` class to the container', () => {
-      const colors = ['info', 'success', 'warning', 'error']
+    it('Supports and adds the correct `variant` class to the container', () => {
+      const variants = ['info', 'success', 'warning', 'error']
 
-      colors.forEach((color) => {
+      variants.forEach((variant) => {
         const component = shallowRender({
-          color,
+          variant,
         })
 
-        expect(component.find(`.ys-notification.ys-notification--${color}`).exists()).toBe(true)
+        expect(component.find(`.ys-notification.ys-notification--${variant}`).exists()).toBe(true)
       })
     })
 
@@ -117,7 +117,7 @@ describe('<Notification>', () => {
       it('With custom props', () => {
         const component = shallowRender({
           className: customClassName,
-          color: 'success',
+          variant: 'success',
           icon: dummyIcon,
         })
 
