@@ -7,11 +7,11 @@ React component library implementing [YouSee DNA](https://github.com/youseedk/dn
 ## Installation and use
 
 ```
-yarn add @youseedk/dna-react
+$ yarn add @youseedk/dna-react
 ```
 
 ```
-npm i @youseedk/dna-react
+$ npm i @youseedk/dna-react
 ```
 
 ### Example
@@ -36,7 +36,9 @@ All components and icons can be imported as ES6 and CommonJS modules.
 
 ### Peer dependencies
 
-Please note that both `react` and `react-dom` are required peer dependencies.
+Please note that both `react` and `react-dom` are required peer dependencies ([^16.8 - the one with hooks](https://reactjs.org/blog/2019/02/06/react-v16.8.0.html)).
 
 ## Documentation
-[For now, Storybook is all you get](https://youseedk.github.io/dna-react/)
+[DNA React documentation (Storybook)](https://youseedk.github.io/dna-react/)
+
+[DNA documentation](https://dna.yousee.dk/)
