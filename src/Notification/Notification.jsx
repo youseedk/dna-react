@@ -5,6 +5,8 @@ import classNames from 'classnames'
 import IconUIExclamationMark from '@youseedk/dna/svg/ui-icons/exclamation-mark.svg'
 import NotificationText from './NotificationText'
 
+import componentPropType from '../../utils/componentPropType'
+
 import '../base.css'
 import '@youseedk/dna/css/icons/ys-icons.css'
 import '@youseedk/dna/css/elements/ys-notification.css'
@@ -45,15 +47,8 @@ const Notification = (props) => {
   )
 }
 
-const notificationTextType = PropTypes.shape({
-  type: PropTypes.oneOf([NotificationText]),
-})
-
 Notification.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(notificationTextType),
-    notificationTextType,
-  ]).isRequired,
+  children: componentPropType(NotificationText).isRequired,
   variant: PropTypes.oneOf(['info', 'success', 'warning', 'error']),
   icon: PropTypes.elementType,
   displayIcon: PropTypes.bool,
