@@ -8,7 +8,7 @@ import Button from './Button'
 import { uiIcons as icons } from '../../utils/iconMapper'
 
 const variants = {
-  default: 'default',
+  default: null,
   light: 'light',
   cta: 'cta',
   'secondary-dark': 'secondary-dark',
