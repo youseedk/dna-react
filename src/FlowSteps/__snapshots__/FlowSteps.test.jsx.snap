@@ -1,0 +1,159 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FlowSteps> Snapshots 0% progress 1`] = `
+<div
+  aria-valuemax={4}
+  aria-valuemin={0}
+  aria-valuenow={0}
+  aria-valuetext="0 ud af 4 trin gennemført"
+  className="ys-flow-steps"
+  role="progressbar"
+>
+  <ol
+    aria-hidden="true"
+    className="ys-flow-steps__list"
+  >
+    <FlowStepsItem
+      active={true}
+      className=""
+    >
+      Step 1
+    </FlowStepsItem>
+    <FlowStepsItem
+      active={false}
+      className=""
+    >
+      Step 2
+    </FlowStepsItem>
+    <FlowStepsItem
+      active={false}
+      className=""
+    >
+      Step 3
+    </FlowStepsItem>
+    <FlowStepsItem
+      active={false}
+      className=""
+    >
+      Step 4
+    </FlowStepsItem>
+  </ol>
+</div>
+`;
+
+exports[`<FlowSteps> Snapshots 25% progress 1`] = `
+<div
+  aria-valuemax={4}
+  aria-valuemin={0}
+  aria-valuenow={1}
+  aria-valuetext="1 ud af 4 trin gennemført"
+  className="ys-flow-steps"
+  role="progressbar"
+>
+  <ol
+    aria-hidden="true"
+    className="ys-flow-steps__list"
+  >
+    <FlowStepsItem
+      active={false}
+      className=""
+    >
+      Step 1
+    </FlowStepsItem>
+    <FlowStepsItem
+      active={true}
+      className=""
+    >
+      Step 2
+    </FlowStepsItem>
+    <FlowStepsItem
+      active={false}
+      className=""
+    >
+      Step 3
+    </FlowStepsItem>
+    <FlowStepsItem
+      active={false}
+      className=""
+    >
+      Step 4
+    </FlowStepsItem>
+  </ol>
+</div>
+`;
+
+exports[`<FlowSteps> Snapshots 100% progress 1`] = `
+<div
+  aria-valuemax={4}
+  aria-valuemin={0}
+  aria-valuenow={4}
+  aria-valuetext="4 ud af 4 trin gennemført"
+  className="ys-flow-steps"
+  role="progressbar"
+>
+  <ol
+    aria-hidden="true"
+    className="ys-flow-steps__list"
+  >
+    <FlowStepsItem
+      active={false}
+      className=""
+    >
+      Step 1
+    </FlowStepsItem>
+    <FlowStepsItem
+      active={false}
+      className=""
+    >
+      Step 2
+    </FlowStepsItem>
+    <FlowStepsItem
+      active={false}
+      className=""
+    >
+      Step 3
+    </FlowStepsItem>
+    <FlowStepsItem
+      active={false}
+      className=""
+    >
+      Step 4
+    </FlowStepsItem>
+  </ol>
+</div>
+`;
+
+exports[`<FlowSteps> Snapshots With custom \`className\` 1`] = `
+<div
+  aria-valuemax={3}
+  aria-valuemin={0}
+  aria-valuenow={3}
+  aria-valuetext="3 ud af 3 trin gennemført"
+  className="ys-flow-steps heron"
+  role="progressbar"
+>
+  <ol
+    aria-hidden="true"
+    className="ys-flow-steps__list"
+  >
+    <FlowStepsItem
+      active={false}
+      className=""
+    >
+      Step 1
+    </FlowStepsItem>
+    <FlowStepsItem
+      active={false}
+      className=""
+    >
+      Step 2
+    </FlowStepsItem>
+    <FlowStepsItem
+      active={false}
+      className=""
+    >
+      Step 3
+    </FlowStepsItem>
+  </ol>
+</div>
+`;

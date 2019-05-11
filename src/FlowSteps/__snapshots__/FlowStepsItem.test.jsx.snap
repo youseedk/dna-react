@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FlowStepsItem> Snapshots Active state 1`] = `
+<li
+  className="ys-flow-steps__item ys-flow-steps__item--active"
+>
+  <span
+    className="ys-flow-steps__label"
+  >
+    step
+  </span>
+</li>
+`;
+
+exports[`<FlowStepsItem> Snapshots Inactive state (default) 1`] = `
+<li
+  className="ys-flow-steps__item"
+>
+  <span
+    className="ys-flow-steps__label"
+  >
+    step
+  </span>
+</li>
+`;
+
+exports[`<FlowStepsItem> Snapshots With custom \`className\` 1`] = `
+<li
+  className="ys-flow-steps__item gibbon"
+>
+  <span
+    className="ys-flow-steps__label"
+  >
+    step
+  </span>
+</li>
+`;
