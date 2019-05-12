@@ -4,7 +4,7 @@ import classNames from 'classnames'
 
 import FlowStepsItem from './FlowStepsItem'
 
-import componentPropType from '../../utils/componentPropType'
+import componentPropType from '../helpers/componentPropType'
 
 import '../base.css'
 import '@youseedk/dna/css/elements/ys-flow-steps.css'

@@ -5,7 +5,7 @@ import classNames from 'classnames'
 import IconUIExclamationMark from '@youseedk/dna/svg/ui-icons/exclamation-mark.svg'
 import NotificationText from './NotificationText'
 
-import componentPropType from '../../utils/componentPropType'
+import componentPropType from '../helpers/componentPropType'
 
 import '../base.css'
 import '@youseedk/dna/css/icons/ys-icons.css'
