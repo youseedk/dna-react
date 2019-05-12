@@ -2,7 +2,6 @@ import React from 'react'
 import { shallow, mount as mountComponent } from 'enzyme'
 
 import Notification from './Notification'
-import dummyIcon from '../../utils/dummyIcon'
 
 const defaultMessage = 'Notification message'
 const customClassName = 'sparrow'
@@ -63,13 +62,10 @@ describe('<Notification>', () => {
 
       const {
         variant,
-        // icon,
-        displayIcon,
         className,
       } = component.props()
 
       expect(variant).toBe('info')
-      expect(displayIcon).toBe(true)
       expect(className).toBe('')
     })
   })
@@ -94,41 +90,53 @@ describe('<Notification>', () => {
         expect(component.find(`.ys-notification.ys-notification--${variant}`).exists()).toBe(true)
       })
     })
+  })
 
-    describe('Icons', () => {
-      it('Doesn\'t render the icon container nor classes if `displayIcon` is `false`', () => {
-        const component = shallowRender({
-          displayIcon: false,
-        })
-
-        expect(component.find('.ys-notification__icon').exists()).toBe(false)
+  describe('Snapshots', () => {
+    it('With custom className', () => {
+      const component = shallowRender({
+        className: customClassName,
       })
 
-      it('Correctly renders icons in the <button> element', () => {
-        const component = shallowRender({
-          icon: dummyIcon,
-        })
-
-        expect(component.find('.ys-notification__icon .ys-icon').exists()).toBe(true)
-      })
+      expect(component).toMatchSnapshot()
     })
 
-    describe('Snapshots', () => {
-      it('With custom props', () => {
-        const component = shallowRender({
-          className: customClassName,
-          variant: 'success',
-          icon: dummyIcon,
-        })
+    it('With default props', () => {
+      const component = shallowRender()
 
-        expect(component).toMatchSnapshot()
+      expect(component).toMatchSnapshot()
+    })
+
+    it('Info variant', () => {
+      const component = shallowRender({
+        variant: 'info',
       })
 
-      it('With default props', () => {
-        const component = shallowRender()
+      expect(component).toMatchSnapshot()
+    })
 
-        expect(component).toMatchSnapshot()
+    it('Success variant', () => {
+      const component = shallowRender({
+        variant: 'success',
       })
+
+      expect(component).toMatchSnapshot()
+    })
+
+    it('Warning variant', () => {
+      const component = shallowRender({
+        variant: 'warning',
+      })
+
+      expect(component).toMatchSnapshot()
+    })
+
+    it('Error variant', () => {
+      const component = shallowRender({
+        variant: 'error',
+      })
+
+      expect(component).toMatchSnapshot()
     })
   })
 })

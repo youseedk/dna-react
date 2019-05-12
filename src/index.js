@@ -8,7 +8,8 @@ import IconUIErase from '@youseedk/dna/svg/ui-icons/erase.svg'
 import IconUIExclamationMark from '@youseedk/dna/svg/ui-icons/exclamation-mark.svg'
 import IconUIEyeClosed from '@youseedk/dna/svg/ui-icons/eye-closed.svg'
 import IconUIEyeOpen from '@youseedk/dna/svg/ui-icons/eye-open.svg'
-import IconUILogo from '@youseedk/dna/svg/ui-icons/logo.svg'
+import IconUIInformation from '@youseedk/dna/svg/ui-icons/information.svg'
+import IconUIYouseelogo from '@youseedk/dna/svg/ui-icons/youseelogo.svg'
 import IconUIMultiplication from '@youseedk/dna/svg/ui-icons/multiplication.svg'
 import IconUIPlus from '@youseedk/dna/svg/ui-icons/plus.svg'
 
@@ -165,14 +166,18 @@ import IconYouseeMore from '@youseedk/dna/svg/icon-set/yousee-more.svg'
 
 // Components
 import Button from './Button'
+import FlowSteps from './FlowSteps'
 import Notification from './Notification'
 import Splash from './Splash'
+import ProgressBar from './ProgressBar'
 import Tag from './Tag'
 
 export {
   Button,
+  FlowSteps,
   Notification,
   Splash,
+  ProgressBar,
   Tag,
   IconUIArrowDown,
   IconUIArrowLeft,
@@ -183,7 +188,8 @@ export {
   IconUIExclamationMark,
   IconUIEyeClosed,
   IconUIEyeOpen,
-  IconUILogo,
+  IconUIInformation,
+  IconUIYouseelogo,
   IconUIMultiplication,
   IconUIPlus,
   IconAddToPlaylist,

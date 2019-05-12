@@ -1,16 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Notification> Rendering Snapshots With custom props 1`] = `
+exports[`<Notification> Snapshots Error variant 1`] = `
 <div
-  className="ys-notification ys-notification--success sparrow"
+  className="ys-notification ys-notification--error"
 >
   <span
     aria-hidden="true"
     className="ys-notification__icon"
   >
-    <dummyIcon
-      className="ys-icon"
-    />
+    <Icon />
   </span>
   <div
     className="ys-notification__content"
@@ -24,7 +22,7 @@ exports[`<Notification> Rendering Snapshots With custom props 1`] = `
 </div>
 `;
 
-exports[`<Notification> Rendering Snapshots With default props 1`] = `
+exports[`<Notification> Snapshots Info variant 1`] = `
 <div
   className="ys-notification ys-notification--info"
 >
@@ -32,11 +30,95 @@ exports[`<Notification> Rendering Snapshots With default props 1`] = `
     aria-hidden="true"
     className="ys-notification__icon"
   >
-    <IconUIExclamationMark
-      className="ys-icon"
-      viewBox="-7 -1 16 16"
-      xmlns="http://www.w3.org/2000/svg"
-    />
+    <Icon />
+  </span>
+  <div
+    className="ys-notification__content"
+  >
+    <NotificationText
+      className=""
+    >
+      Notification message
+    </NotificationText>
+  </div>
+</div>
+`;
+
+exports[`<Notification> Snapshots Success variant 1`] = `
+<div
+  className="ys-notification ys-notification--success"
+>
+  <span
+    aria-hidden="true"
+    className="ys-notification__icon"
+  >
+    <Icon />
+  </span>
+  <div
+    className="ys-notification__content"
+  >
+    <NotificationText
+      className=""
+    >
+      Notification message
+    </NotificationText>
+  </div>
+</div>
+`;
+
+exports[`<Notification> Snapshots Warning variant 1`] = `
+<div
+  className="ys-notification ys-notification--warning"
+>
+  <span
+    aria-hidden="true"
+    className="ys-notification__icon"
+  >
+    <Icon />
+  </span>
+  <div
+    className="ys-notification__content"
+  >
+    <NotificationText
+      className=""
+    >
+      Notification message
+    </NotificationText>
+  </div>
+</div>
+`;
+
+exports[`<Notification> Snapshots With custom className 1`] = `
+<div
+  className="ys-notification ys-notification--info sparrow"
+>
+  <span
+    aria-hidden="true"
+    className="ys-notification__icon"
+  >
+    <Icon />
+  </span>
+  <div
+    className="ys-notification__content"
+  >
+    <NotificationText
+      className=""
+    >
+      Notification message
+    </NotificationText>
+  </div>
+</div>
+`;
+
+exports[`<Notification> Snapshots With default props 1`] = `
+<div
+  className="ys-notification ys-notification--info"
+>
+  <span
+    aria-hidden="true"
+    className="ys-notification__icon"
+  >
+    <Icon />
   </span>
   <div
     className="ys-notification__content"
