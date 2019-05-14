@@ -21,7 +21,7 @@ const labelOptions = ['label', 'Label text', 'Content']
 const variantOptions = ['variant', variants, variants.default, 'Visuals']
 const disabledOptions = ['disabled', false, 'Visuals']
 const blockOptions = ['block', false, 'Visuals']
-const iconOptions = ['icon', Object.keys(icons), icons.none, 'Visuals']
+const iconOptions = ['icon', Object.keys(icons), 'none', 'Visuals']
 const iconOnlyOptions = ['iconOnly', false, 'Visuals']
 const classNameOptions = ['className', '', 'Misc']
 
