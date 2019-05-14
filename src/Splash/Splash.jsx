@@ -5,14 +5,13 @@ import classNames from 'classnames'
 import '../base.css'
 import '@youseedk/dna/css/elements/ys-splash.css'
 
-const Splash = (props) => {
-  const {
-    price,
-    description,
-    variant,
-    className,
-  } = props
-
+const Splash = ({
+  price,
+  description,
+  variant,
+  className,
+  ...props
+}) => {
   const priceSuffixed = `${price},-`
   const wrapperProps = {
     className: classNames(
@@ -20,6 +19,7 @@ const Splash = (props) => {
       `ys-splash--${variant}`, // TODO: Only `ys-splash--blue` is being used, but more colors are to be expected
       className,
     ),
+    ...props,
   }
 
   return (

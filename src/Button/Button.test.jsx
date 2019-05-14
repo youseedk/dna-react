@@ -201,6 +201,17 @@ describe('<Button>', () => {
         expect(component.find('.ys-button__text.ys-u-visuallyhidden').exists()).toBe(true)
       })
     })
+
+    it('Passes other generic props to container element', () => {
+      const component = shallowRender({
+        href: 'https://yousee.dk',
+        autoFocus: true,
+        tabIndex: 0,
+      })
+
+      expect(component.props().autoFocus).toBe(true)
+      expect(component.props().tabIndex).toBe(0)
+    })
   })
 
   describe('Events', () => {

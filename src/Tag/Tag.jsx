@@ -5,17 +5,17 @@ import classNames from 'classnames'
 import '../base.css'
 import '@youseedk/dna/css/elements/ys-tag.css'
 
-const Tag = (props) => {
-  const {
-    label,
-    className,
-  } = props
-
+const Tag = ({
+  label,
+  className,
+  ...props
+}) => {
   const wrapperProps = {
     className: classNames(
       'ys-tag',
       className,
     ),
+    ...props,
   }
 
   return (

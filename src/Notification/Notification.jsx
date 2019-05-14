@@ -13,13 +13,12 @@ import '../base.css'
 import '@youseedk/dna/css/icons/ys-icons.css'
 import '@youseedk/dna/css/elements/ys-notification.css'
 
-const Notification = (props) => {
-  const {
-    variant,
-    className,
-    children,
-  } = props
-
+const Notification = ({
+  variant,
+  className,
+  children,
+  ...props
+}) => {
   const Icon = () => {
     const variantIcons = {
       info: IconUIInformation,
@@ -41,6 +40,7 @@ const Notification = (props) => {
       `ys-notification--${variant}`,
       className,
     ),
+    ...props,
   }
 
   return (

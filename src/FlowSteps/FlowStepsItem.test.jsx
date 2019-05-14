@@ -61,6 +61,16 @@ describe('<FlowStepsItem>', () => {
 
       expect(component.find('.ys-flow-steps__label').text()).toBe(stepLabel)
     })
+
+    it('Passes other generic props to container element', () => {
+      const component = shallowRender(stepLabel, {
+        id: 'test',
+        tabIndex: 0,
+      })
+
+      expect(component.props().id).toBe('test')
+      expect(component.props().tabIndex).toBe(0)
+    })
   })
 
   describe('Snapshots', () => {

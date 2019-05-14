@@ -97,6 +97,16 @@ describe('<ProgressBar>', () => {
         width: '14%',
       })
     })
+
+    it('Passes other generic props to container element', () => {
+      const component = shallowRender({
+        id: 'test',
+        tabIndex: 0,
+      })
+
+      expect(component.props().id).toBe('test')
+      expect(component.props().tabIndex).toBe(0)
+    })
   })
 
   describe('Snapshots', () => {

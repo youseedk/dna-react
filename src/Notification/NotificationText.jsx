@@ -2,17 +2,17 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
-const NotificationText = (props) => {
-  const {
-    children,
-    className,
-  } = props
-
+const NotificationText = ({
+  children,
+  className,
+  ...props
+}) => {
   const wrapperProps = {
     className: classNames(
       'ys-notification__text',
       className,
     ),
+    ...props,
   }
 
   return (

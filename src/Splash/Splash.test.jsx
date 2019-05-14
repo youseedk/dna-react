@@ -106,5 +106,15 @@ describe('<Splash>', () => {
         expect(component.find(`.ys-splash.ys-splash--${variant}`).exists()).toBe(true)
       })
     })
+
+    it('Passes other generic props to container element', () => {
+      const component = shallowRender({
+        id: 'test',
+        tabIndex: 0,
+      })
+
+      expect(component.props().id).toBe('test')
+      expect(component.props().tabIndex).toBe(0)
+    })
   })
 })

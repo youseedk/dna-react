@@ -2,19 +2,19 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
-const FlowStepsItem = (props) => {
-  const {
-    children,
-    active,
-    className,
-  } = props
-
+const FlowStepsItem = ({
+  children,
+  active,
+  className,
+  ...props
+}) => {
   const wrapperProps = {
     className: classNames(
       'ys-flow-steps__item',
       active && 'ys-flow-steps__item--active',
       className,
     ),
+    ...props,
   }
 
   return (

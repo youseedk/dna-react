@@ -94,6 +94,18 @@ describe('<FlowSteps>', () => {
 
       expect(component.prop('aria-valuenow')).toBe(3)
     })
+
+    it('Passes other generic props to container element', () => {
+      const component = shallow(
+        <FlowSteps tabIndex="0" id="test">
+          <FlowSteps.Item>Step 1</FlowSteps.Item>
+          <FlowSteps.Item>Step 2</FlowSteps.Item>
+        </FlowSteps>,
+      )
+
+      expect(component.props().id).toBe('test')
+      expect(component.props().tabIndex).toBe('0')
+    })
   })
 
   describe('Snapshots', () => {

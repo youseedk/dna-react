@@ -90,6 +90,16 @@ describe('<Notification>', () => {
         expect(component.find(`.ys-notification.ys-notification--${variant}`).exists()).toBe(true)
       })
     })
+
+    it('Passes other generic props to container element', () => {
+      const component = shallowRender({
+        id: 'test',
+        tabIndex: 0,
+      })
+
+      expect(component.props().id).toBe('test')
+      expect(component.props().tabIndex).toBe(0)
+    })
   })
 
   describe('Snapshots', () => {

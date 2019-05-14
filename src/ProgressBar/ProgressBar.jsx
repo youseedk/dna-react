@@ -5,21 +5,21 @@ import classNames from 'classnames'
 import '../base.css'
 import '@youseedk/dna/css/elements/ys-progress.css'
 
-const ProgressBar = (props) => {
-  const {
-    value,
-    valueMin,
-    valueMax,
-    variant,
-    className,
-  } = props
-
+const ProgressBar = ({
+  value,
+  valueMin,
+  valueMax,
+  variant,
+  className,
+  ...props
+}) => {
   const wrapperProps = {
     className: classNames(
       'ys-progress',
       variant && `ys-progress--${variant}`,
       className,
     ),
+    ...props,
   }
 
   const progress = Math.round((value - valueMin) / (valueMax - valueMin) * 100)

@@ -9,17 +9,17 @@ import componentPropType from '../helpers/componentPropType'
 import '../base.css'
 import '@youseedk/dna/css/elements/ys-flow-steps.css'
 
-const FlowSteps = (props) => {
-  const {
-    children,
-    className,
-  } = props
-
+const FlowSteps = ({
+  children,
+  className,
+  ...props
+}) => {
   const wrapperProps = {
     className: classNames(
       'ys-flow-steps',
       className,
     ),
+    ...props,
   }
 
   const totalSteps = children.length

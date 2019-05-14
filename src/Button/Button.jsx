@@ -6,19 +6,18 @@ import '../base.css'
 import '@youseedk/dna/css/icons/ys-icons.css'
 import '@youseedk/dna/css/elements/ys-button.css'
 
-const Button = (props) => {
-  const {
-    label,
-    href,
-    onClick,
-    disabled,
-    className,
-    variant,
-    block,
-    icon: Icon,
-    iconOnly,
-  } = props
-
+const Button = ({
+  label,
+  href,
+  onClick,
+  disabled,
+  className,
+  variant,
+  block,
+  icon: Icon,
+  iconOnly,
+  ...props
+}) => {
   const buttonContent = (
     <Fragment>
       <span
@@ -53,6 +52,7 @@ const Button = (props) => {
       iconOnly && 'ys-button--icon-only',
       className,
     ),
+    ...props,
   }
 
   if (href) {
