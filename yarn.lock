@@ -1759,9 +1759,9 @@
   version "4.2.2"
   resolved "https://registry.yarnpkg.com/@xtuc/long/-/long-4.2.2.tgz#d291c6a4e97989b5c61d9acf396ae4fe133a718d"
 
-"@youseedk/dna@^1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@youseedk/dna/-/dna-1.0.3.tgz#aaec921057fe5412433285488ccd779c34db7664"
+"@youseedk/dna@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@youseedk/dna/-/dna-1.1.0.tgz#2098c1d505ea02f68707f0377efc497c10d8de12"
 
 abab@^2.0.0:
   version "2.0.0"
