@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react'
+import { NavLink } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
@@ -8,6 +9,7 @@ import '@youseedk/dna/css/elements/ys-button.css'
 
 const Button = ({
   label,
+  to,
   href,
   onClick,
   disabled,
@@ -66,6 +68,17 @@ const Button = ({
     )
   }
 
+  if (to) {
+    return (
+      <NavLink
+        to={to}
+        {...wrapperProps}
+      >
+        {buttonContent}
+      </NavLink>
+    )
+  }
+
   return (
     <button
       type="button"
@@ -80,7 +93,8 @@ const Button = ({
 /* eslint-disable react/require-default-props */
 Button.propTypes = {
   label: PropTypes.string.isRequired,
-  onClick: PropTypes.func, // TODO: Add custom validation, as either `onClick` or `href` is required
+  onClick: PropTypes.func,
+  to: PropTypes.string,
   href: PropTypes.string,
   variant: PropTypes.oneOf(['light', 'cta', 'secondary-dark', 'secondary-light', 'tertiary-dark', 'tertiary-light']),
   disabled: PropTypes.bool,

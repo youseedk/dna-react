@@ -1,5 +1,6 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
+import StoryRouter from 'storybook-react-router'
 
 import { text, boolean, select } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
@@ -27,7 +28,8 @@ const classNameOptions = ['className', '', 'Misc']
 
 storiesOf('Button', module)
   .addParameters({ jest: ['Button'] })
-  .add('Default', () => (
+  .addDecorator(StoryRouter())
+  .add('Button element', () => (
     <Button
       label={text(...labelOptions)}
       variant={select(...variantOptions)}
@@ -39,11 +41,23 @@ storiesOf('Button', module)
       className={text(...classNameOptions)}
     />
   ))
-  .add('Link', () => (
+  .add('Anchor element', () => (
     <Button
       label={text(...labelOptions)}
       variant={select(...variantOptions)}
       href={text('href', 'https://yousee.dk', 'Content')}
+      disabled={boolean(...disabledOptions)}
+      block={boolean(...blockOptions)}
+      icon={icons[select(...iconOptions)]}
+      iconOnly={boolean(...iconOnlyOptions)}
+      className={text(...classNameOptions)}
+    />
+  ))
+  .add('React Router <NavLink>', () => (
+    <Button
+      label={text(...labelOptions)}
+      variant={select(...variantOptions)}
+      to={text('to', '/dna', 'Content')}
       disabled={boolean(...disabledOptions)}
       block={boolean(...blockOptions)}
       icon={icons[select(...iconOptions)]}
