@@ -92,6 +92,8 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.1.0",
     "mini-css-extract-plugin": "^0.5.0",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
     "react-router-dom": "^5.0.0",
     "storybook-react-router": "^1.0.5",
     "webpack": "^4.29.5",
