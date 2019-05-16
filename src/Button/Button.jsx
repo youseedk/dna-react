@@ -1,7 +1,8 @@
 import React, { Fragment } from 'react'
-import { NavLink } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
+
+import RouterLink from '../helpers/RouterLink'
 
 import '../base.css'
 import '@youseedk/dna/css/icons/ys-icons.css'
@@ -57,25 +58,15 @@ const Button = ({
     ...props,
   }
 
-  if (href) {
+  if (to || href) {
     return (
-      <a
+      <RouterLink
+        to={to}
         href={href}
         {...wrapperProps}
       >
         {buttonContent}
-      </a>
-    )
-  }
-
-  if (to) {
-    return (
-      <NavLink
-        to={to}
-        {...wrapperProps}
-      >
-        {buttonContent}
-      </NavLink>
+      </RouterLink>
     )
   }
 

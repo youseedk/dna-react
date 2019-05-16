@@ -1,6 +1,5 @@
 import React from 'react'
 import { shallow, mount as mountComponent } from 'enzyme'
-import { MemoryRouter } from 'react-router-dom'
 
 import Button from './Button'
 import dummyIcon from '../../utils/dummyIcon'
@@ -67,41 +66,12 @@ describe('<Button>', () => {
       expect(component.find('button').exists()).toBe(true)
     })
 
-    it('Outputs an <a> element when passed an `href` prop', () => {
-      const href = 'https://yousee.dk'
-      const component = shallowRender({
-        href,
-      })
-
-      expect(component.find('a').prop('href')).toBe(href)
-    })
-
-    it('Outputs an <a> element when passed a `to` prop', () => {
-      // Relies on React Router <NavLink>
-      const to = '/very-page'
-      const component = mountComponent(
-        <MemoryRouter>
-          {getButton({ to })}
-        </MemoryRouter>,
-      )
-
-      expect(component.find('a').prop('href')).toBe(to)
-    })
-
     it('Displays the correct label in the <button> element', () => {
       const component = shallowRender({
         onClick: jest.fn(),
       })
 
       expect(component.find('button span').text()).toBe(defaultLabel)
-    })
-
-    it('Displays the correct label in the <a> element', () => {
-      const component = shallowRender({
-        href: 'https://yousee.dk',
-      })
-
-      expect(component.find('a span').text()).toBe(defaultLabel)
     })
 
     it('<button> element has the `ys-button` default class', () => {
