@@ -3,23 +3,23 @@ import React from 'react'
 import { shallow, mount } from 'enzyme'
 import { MemoryRouter } from 'react-router-dom'
 
-import RouterLink from './RouterLink'
+import Anchor from './Anchor'
 
 const defaultLabel = 'Click me!'
 const getLink = (props, children) => (
-  <RouterLink {...props}>
+  <Anchor {...props}>
     {defaultLabel || children}
-  </RouterLink>
+  </Anchor>
 )
 
 const shallowRender = (props, children) => shallow(getLink(props, children))
 
-describe('<RouterLink>', () => {
+describe('<Anchor>', () => {
   describe('Props', () => {
     describe('Props', () => {
       it('Throws propType warning if no `child` is passed', () => {
         const component = () => shallow(
-          <RouterLink />,
+          <Anchor />,
         )
 
         expect(component).toThrow()
@@ -68,7 +68,7 @@ describe('<RouterLink>', () => {
 
     it('Forwards arbitrary props', () => {
       expect(
-        shallow(<RouterLink title="Gå til Yousee.dk" />)
+        shallow(<Anchor title="Gå til Yousee.dk" />)
           .find('a')
           .props()
           .title,
@@ -77,14 +77,14 @@ describe('<RouterLink>', () => {
 
     it('Displays the label', () => {
       expect(
-        shallow(<RouterLink>Klik her</RouterLink>)
+        shallow(<Anchor>Klik her</Anchor>)
           .find('a')
           .text(),
       ).toBe('Klik her')
     })
 
     it('Sets `tabindex` and `aria-disabled` attributes when disabled', () => {
-      const props = shallow(<RouterLink disabled />)
+      const props = shallow(<Anchor disabled />)
         .find('a')
         .props()
 
@@ -94,7 +94,7 @@ describe('<RouterLink>', () => {
     })
 
     it('Sets `role=button` when no href is provided', () => {
-      const props = shallow(<RouterLink />)
+      const props = shallow(<Anchor />)
         .find('a')
         .props()
 
@@ -105,7 +105,7 @@ describe('<RouterLink>', () => {
       expect(
         mount(
           <MemoryRouter>
-            <RouterLink to="page" />
+            <Anchor to="page" />
           </MemoryRouter>,
         )
           .find('a')

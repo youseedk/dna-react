@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom'
 // A simple helper component that either returns a regular
 // anchor element or a React Router <NavLink> element.
 
-const RouterLink = ({
+const Anchor = ({
   children,
   to,
   href,
@@ -39,17 +39,17 @@ const RouterLink = ({
   )
 }
 
-RouterLink.propTypes = {
+Anchor.propTypes = {
   children: PropTypes.node.isRequired,
   to: PropTypes.string,
   href: PropTypes.string,
   disabled: PropTypes.bool,
 }
 
-RouterLink.defaultProps = {
+Anchor.defaultProps = {
   to: null,
   href: null,
   disabled: false,
 }
 
-export default RouterLink
+export default Anchor

@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
-import RouterLink from '../helpers/RouterLink'
+import Anchor from '../helpers/Anchor'
 
 import '../base.css'
 import '@youseedk/dna/css/icons/ys-icons.css'
@@ -60,13 +60,13 @@ const Button = ({
 
   if (to || href) {
     return (
-      <RouterLink
+      <Anchor
         to={to}
         href={href}
         {...wrapperProps}
       >
         {buttonContent}
-      </RouterLink>
+      </Anchor>
     )
   }
 
