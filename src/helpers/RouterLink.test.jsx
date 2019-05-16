@@ -90,6 +90,28 @@ describe('<RouterLink>', () => {
 
       expect(props['aria-disabled']).toBe(true)
       expect(props.tabIndex).toBe(-1)
+      expect(props.disabled).toBe(undefined)
+    })
+
+    it('Sets `role=button` when no href is provided', () => {
+      const props = shallow(<RouterLink />)
+        .find('a')
+        .props()
+
+      expect(props.role).toBe('button')
+    })
+
+    it('Never sets `role=button` if `to` is provided', () => {
+      expect(
+        mount(
+          <MemoryRouter>
+            <RouterLink to="page" />
+          </MemoryRouter>,
+        )
+          .find('a')
+          .props()
+          .role,
+      ).toBe(undefined)
     })
   })
 })

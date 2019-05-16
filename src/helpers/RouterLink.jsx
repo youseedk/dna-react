@@ -20,6 +20,14 @@ const RouterLink = ({
     allProps['aria-disabled'] = true
   }
 
+  // Set role="button" if no `to` prop is passed,
+  // and `href` is either undefined or '#' meaning
+  // it has effectively been turned into a button
+  // relying on an `onClick` prop to work.
+  if (!to && (!href || href.trim() === '#')) {
+    allProps.role = 'button'
+  }
+
   return (
     <Component
       to={to}
