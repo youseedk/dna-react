@@ -61,6 +61,21 @@ describe('<Link>', () => {
       expect(props.title).toBe('Gå til YouSee.dk')
       expect(props.target).toBe('_blank')
     })
+
+    it('Doesn\'t add `ys-link` class if given `unstyled` prop', () => {
+      expect(
+        shallow(
+          <Link
+            unstyled
+            href="https://yousee.dk"
+          >
+            YouSee.dk
+          </Link>,
+        )
+          .find('.ys-link')
+          .exists(),
+      ).toBe(false)
+    })
   })
 
   describe('Snapshots', () => {

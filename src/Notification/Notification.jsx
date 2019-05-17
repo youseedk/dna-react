@@ -6,6 +6,7 @@ import IconUIInformation from '@youseedk/dna/svg/ui-icons/information.svg'
 import IconUIExclamationMark from '@youseedk/dna/svg/ui-icons/exclamation-mark.svg'
 import IconUICheckMark from '@youseedk/dna/svg/ui-icons/check-mark.svg'
 import NotificationText from './NotificationText'
+import NotificationTextLink from './NotificationTextLink'
 
 import componentPropType from '../helpers/componentPropType'
 
@@ -70,5 +71,6 @@ Notification.defaultProps = {
 }
 
 Notification.Text = NotificationText
+Notification.TextLink = NotificationTextLink
 
 export default Notification

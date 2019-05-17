@@ -2,33 +2,36 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
-const NotificationText = ({
+import Link from '../Link'
+
+const NotificationTextLink = ({
   children,
   className,
   ...props
 }) => {
   const wrapperProps = {
+    unstyled: true,
     className: classNames(
-      'ys-notification__text',
+      'ys-notification__inline-link',
       className,
     ),
     ...props,
   }
 
   return (
-    <p {...wrapperProps}>
+    <Link {...wrapperProps}>
       {children}
-    </p>
+    </Link>
   )
 }
 
-NotificationText.propTypes = {
+NotificationTextLink.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
 }
 
-NotificationText.defaultProps = {
+NotificationTextLink.defaultProps = {
   className: '',
 }
 
-export default NotificationText
+export default NotificationTextLink

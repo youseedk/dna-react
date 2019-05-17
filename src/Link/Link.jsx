@@ -12,13 +12,15 @@ const Link = ({
   to,
   children,
   className,
+  unstyled,
   ...props
 }) => (
   <Anchor
     href={href}
     to={to}
     className={classNames(
-      'ys-link',
+      // Links inside notifications should not have the `ys-link` class
+      !unstyled && 'ys-link',
       className,
     )}
     {...props}
@@ -32,12 +34,14 @@ Link.propTypes = {
   to: PropTypes.string,
   href: PropTypes.string,
   className: PropTypes.string,
+  unstyled: PropTypes.bool,
 }
 
 Link.defaultProps = {
   to: null,
   href: null,
   className: '',
+  unstyled: false,
 }
 
 export default Link
