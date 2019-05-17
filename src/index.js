@@ -167,6 +167,7 @@ import IconYouseeMore from '@youseedk/dna/svg/icon-set/yousee-more.svg'
 // Components
 import Button from './Button'
 import FlowSteps from './FlowSteps'
+import Link from './Link'
 import Notification from './Notification'
 import Shortcut from './Shortcut'
 import Splash from './Splash'
@@ -176,6 +177,7 @@ import Tag from './Tag'
 export {
   Button,
   FlowSteps,
+  Link,
   Notification,
   Shortcut,
   Splash,

@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Link> Snapshots With custom props 1`] = `
+<Anchor
+  className="ys-link"
+  disabled={false}
+  href="https://yousee.dk"
+  target="_blank"
+  title="Gå til YouSee.dk"
+  to={null}
+>
+  YouSee.dk
+</Anchor>
+`;
+
+exports[`<Link> Snapshots With default props 1`] = `
+<Anchor
+  className="ys-link"
+  disabled={false}
+  href={null}
+  to="/kurv"
+>
+  Til kurv
+</Anchor>
+`;
