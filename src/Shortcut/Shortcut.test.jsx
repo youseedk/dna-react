@@ -9,7 +9,6 @@ const customClassName = 'camel'
 const getShortcut = props => (
   <Shortcut
     label={defaultLabel}
-    href="https://yousee.dk"
     icon={dummyIcon}
     {...props}
   />
@@ -22,20 +21,15 @@ describe('<Shortcut>', () => {
   describe('Props', () => {
     it('Throws propType warning if no `label` prop is passed', () => {
       const component = () => shallowRender({
+        href: 'https://yousee.dk',
         label: null,
-      })
-      expect(component).toThrow()
-    })
-
-    it('Throws propType warning if no `href` prop is passed', () => {
-      const component = () => shallowRender({
-        href: null,
       })
       expect(component).toThrow()
     })
 
     it('Throws propType warning if no `icon` prop is passed', () => {
       const component = () => shallowRender({
+        href: 'https://yousee.dk',
         icon: null,
       })
       expect(component).toThrow()
@@ -46,9 +40,13 @@ describe('<Shortcut>', () => {
 
       const {
         className,
+        href,
+        to,
       } = component.props()
 
       expect(className).toBe('')
+      expect(href).toBe(null)
+      expect(to).toBe(null)
     })
   })
 
@@ -56,18 +54,8 @@ describe('<Shortcut>', () => {
     it('Outputs elements with the correct class names', () => {
       const component = shallowRender()
 
-      expect(component.find('a.ys-shortcut').exists()).toBe(true)
       expect(component.find('figure.ys-shortcut__icon-container').exists()).toBe(true)
       expect(component.find('span.ys-shortcut__title').exists()).toBe(true)
-    })
-
-    it('Outputs an <a> container element', () => {
-      const href = 'https://yousee.dk'
-      const component = shallowRender({
-        href,
-      })
-
-      expect(component.find('a').prop('href')).toBe(href)
     })
 
     it('Custom `className` is being applied to the container', () => {
@@ -82,16 +70,19 @@ describe('<Shortcut>', () => {
       const component = shallowRender({
         id: 'test',
         tabIndex: 0,
+        className: 'owl',
       })
 
       expect(component.props().id).toBe('test')
       expect(component.props().tabIndex).toBe(0)
+      expect(component.props().className).toBe('ys-shortcut owl')
     })
   })
 
   describe('Snapshots', () => {
     it('With custom `className`', () => {
       const component = shallowRender({
+        href: 'https://yousee.dk',
         className: customClassName,
       })
 
@@ -99,7 +90,9 @@ describe('<Shortcut>', () => {
     })
 
     it('Without custom `className`', () => {
-      const component = shallowRender()
+      const component = shallowRender({
+        href: 'https://yousee.dk',
+      })
 
       expect(component).toMatchSnapshot()
     })
