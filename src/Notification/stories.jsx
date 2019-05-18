@@ -28,8 +28,7 @@ storiesOf('Notification', module)
       className={text('className', '', 'Misc')}
     >
       <Notification.Text>
-        To fix this
-        &nbsp;
+        To fix this&nbsp;
         <Notification.TextLink href="https://yousee.dk">go to this place</Notification.TextLink>
       </Notification.Text>
     </Notification>
