@@ -36,7 +36,7 @@ All components and icons can be imported as ES6 and CommonJS modules.
 
 ### Peer dependencies
 
-Please note that both `react`, `react-dom`, and `react-router-dom` are required peer dependencies ([^16.8 - the one with hooks](https://reactjs.org/blog/2019/02/06/react-v16.8.0.html)).
+Please note that `react`, `react-dom`, and `react-router-dom` are required peer dependencies.
 
 ## Documentation
 [DNA React documentation (Storybook)](https://youseedk.github.io/dna-react/)
