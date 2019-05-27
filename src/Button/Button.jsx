@@ -19,10 +19,24 @@ const Button = ({
   block,
   icon: Icon,
   iconOnly,
+  iconAlignment,
   ...props
 }) => {
+  const icon = (
+    Icon
+      && (
+        <span
+          className="ys-button__icon"
+          aria-hidden="true"
+        >
+          <Icon className="ys-icon" />
+        </span>
+      )
+  )
+
   const buttonContent = (
     <Fragment>
+      {iconAlignment === 'left' && icon}
       <span
         className={classNames(
           'ys-button__text',
@@ -31,16 +45,7 @@ const Button = ({
       >
         {label}
       </span>
-      {Icon
-        && (
-          <span
-            className="ys-button__icon"
-            aria-hidden="true"
-          >
-            <Icon className="ys-icon" />
-          </span>
-        )
-      }
+      {iconAlignment === 'right' && icon}
     </Fragment>
   )
 
@@ -93,6 +98,7 @@ Button.propTypes = {
   block: PropTypes.bool,
   icon: PropTypes.elementType,
   iconOnly: PropTypes.bool,
+  iconAlignment: PropTypes.oneOf(['left', 'right']),
 }
 /* eslint-enable react/require-default-props */
 
@@ -103,6 +109,7 @@ Button.defaultProps = {
   block: false,
   icon: null,
   iconOnly: false,
+  iconAlignment: 'right',
 }
 
 export default Button

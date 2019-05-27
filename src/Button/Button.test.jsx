@@ -46,6 +46,7 @@ describe('<Button>', () => {
         block,
         icon,
         iconOnly,
+        iconAlignment,
       } = component.props()
 
       expect(variant).toBe(null)
@@ -54,6 +55,7 @@ describe('<Button>', () => {
       expect(block).toBe(false)
       expect(icon).toBe(null)
       expect(iconOnly).toBe(false)
+      expect(iconAlignment).toBe('right')
     })
   })
 
@@ -194,6 +196,34 @@ describe('<Button>', () => {
 
       expect(component.props().autoFocus).toBe(true)
       expect(component.props().tabIndex).toBe(0)
+    })
+
+    it('Renders icon position according to `iconAlignment`', () => {
+      expect(
+        shallow(
+          <Button
+            label={defaultLabel}
+            icon={dummyIcon}
+            iconAlignment="left"
+          />,
+        )
+          .find('button')
+          .childAt(0)
+          .hasClass('ys-button__icon'),
+      ).toBe(true)
+
+      expect(
+        shallow(
+          <Button
+            label={defaultLabel}
+            icon={dummyIcon}
+            iconAlignment="right"
+          />,
+        )
+          .find('button')
+          .childAt(0)
+          .hasClass('ys-button__text'),
+      ).toBe(true)
     })
   })
 

@@ -24,6 +24,7 @@ const disabledOptions = ['disabled', false, 'Visuals']
 const blockOptions = ['block', false, 'Visuals']
 const iconOptions = ['icon', Object.keys(icons), 'none', 'Visuals']
 const iconOnlyOptions = ['iconOnly', false, 'Visuals']
+const iconAlignmentOptions = ['iconAlignment', ['left', 'right'], 'right', 'Visuals']
 const classNameOptions = ['className', '', 'Misc']
 
 storiesOf('Button', module)
@@ -38,6 +39,7 @@ storiesOf('Button', module)
       block={boolean(...blockOptions)}
       icon={icons[select(...iconOptions)]}
       iconOnly={boolean(...iconOnlyOptions)}
+      iconAlignment={select(...iconAlignmentOptions)}
       className={text(...classNameOptions)}
     />
   ))
@@ -50,6 +52,7 @@ storiesOf('Button', module)
       block={boolean(...blockOptions)}
       icon={icons[select(...iconOptions)]}
       iconOnly={boolean(...iconOnlyOptions)}
+      iconAlignment={select(...iconAlignmentOptions)}
       className={text(...classNameOptions)}
     />
   ))
@@ -62,6 +65,7 @@ storiesOf('Button', module)
       block={boolean(...blockOptions)}
       icon={icons[select(...iconOptions)]}
       iconOnly={boolean(...iconOnlyOptions)}
+      iconAlignment={select(...iconAlignmentOptions)}
       className={text(...classNameOptions)}
     />
   ))
