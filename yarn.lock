@@ -1804,7 +1804,7 @@
   version "4.2.2"
   resolved "https://registry.yarnpkg.com/@xtuc/long/-/long-4.2.2.tgz#d291c6a4e97989b5c61d9acf396ae4fe133a718d"
 
-"@youseedk/dna@^1.1.1":
+"@youseedk/dna@^1.2.2":
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/@youseedk/dna/-/dna-1.2.2.tgz#bdb213b74c6090dbe6ec81c658f3a8753ddf089d"
 
