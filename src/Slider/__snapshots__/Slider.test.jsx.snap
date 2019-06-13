@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Slider> Snapshots With custom \`className\` 1`] = `
+<div
+  className="ys-slider lizard"
+>
+  <label
+    className="ys-slider__label"
+    htmlFor="slider-1"
+  >
+    <span
+      className="ys-slider__label-text"
+    >
+      Label
+    </span>
+    <span
+      className="ys-slider__control-wrapper"
+    >
+      <input
+        className="ys-slider__control"
+        id="slider-1"
+        max={100}
+        min={0}
+        onChange={[Function]}
+        step={10}
+        type="range"
+        value={20}
+      />
+    </span>
+  </label>
+</div>
+`;
