@@ -19,7 +19,7 @@ const updateStore = decorate([(value) => {
 store.subscribe(forceReRender)
 
 storiesOf('Slider', module)
-  .addParameters({ jest: ['Slider'] })
+  .addParameters({ jest: ['Slider', 'SliderStep'] })
   .add('Default', () => (
     <State store={store}>
       <Slider

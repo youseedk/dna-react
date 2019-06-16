@@ -13,7 +13,7 @@ const variants = {
 }
 
 storiesOf('Notification', module)
-  .addParameters({ jest: ['Notification'] })
+  .addParameters({ jest: ['Notification', 'NotificationText', 'NotificationTextLink'] })
   .add('Default', () => (
     <Notification
       variant={select('variant', variants, variants.info, 'Visuals')}

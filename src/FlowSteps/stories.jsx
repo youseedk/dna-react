@@ -6,7 +6,7 @@ import { text } from '@storybook/addon-knobs'
 import FlowSteps from './FlowSteps'
 
 storiesOf('FlowSteps', module)
-  .addParameters({ jest: ['FlowSteps'] })
+  .addParameters({ jest: ['FlowSteps', 'FlowStepsItem'] })
   .add('0% complete', () => (
     <FlowSteps
       className={text('className', '', 'Misc')}
