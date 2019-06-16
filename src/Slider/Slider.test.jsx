@@ -75,6 +75,8 @@ describe('<Slider>', () => {
         className,
         children,
         step,
+        labelMin,
+        labelMax,
       } = mount(
         <Slider
           value={2}
@@ -88,6 +90,8 @@ describe('<Slider>', () => {
       expect(className).toBe('')
       expect(children).toBe(null)
       expect(step).toBe(1)
+      expect(labelMin).toBe('')
+      expect(labelMax).toBe('')
     })
   })
 
@@ -150,7 +154,53 @@ describe('<Slider>', () => {
       ).toBe(3)
     })
 
-    it('Displays assistive label containing step information', () => {
+    it('Displays assistive labels containing step information', () => {
+      expect(
+        shallow(
+          <Slider
+            value={2}
+            valueMin={1}
+            valueMax={7}
+            label="Choose size"
+            labelMin="XXS"
+            labelMax="XXL"
+            onChange={jest.fn()}
+          />,
+        )
+          .find('.ys-slider__label-text span')
+          .text(),
+      ).toBe('(valgmulighederne er mellem XXS og XXL)')
+    })
+
+    it('Displays `labelMin` and `labelMax` labels', () => {
+      const component = shallow(
+        <Slider
+          value={0}
+          valueMin={0}
+          valueMax={100}
+          label="Label"
+          labelMin="0%"
+          labelMax="100%"
+          onChange={jest.fn()}
+        />,
+      )
+
+      expect(
+        component
+          .find('.ys-slider__minmax-label')
+          .first()
+          .text(),
+      ).toBe('0%')
+
+      expect(
+        component
+          .find('.ys-slider__minmax-label')
+          .last()
+          .text(),
+      ).toBe('100%')
+    })
+
+    it('Displays assistive labels based on min/max labels', () => {
       expect(
         shallow(
           <Slider
@@ -203,6 +253,22 @@ describe('<Slider>', () => {
             <Slider.Step>Venti</Slider.Step>
             <Slider.Step>Trenta</Slider.Step>
           </Slider>,
+        ),
+      ).toMatchSnapshot()
+    })
+
+    it('With min/max labels', () => {
+      expect(
+        shallow(
+          <Slider
+            value={0}
+            valueMin={0}
+            valueMax={10}
+            label="Rating"
+            labelMin="0/10"
+            labelMax="10/10"
+            onChange={jest.fn()}
+          />,
         ),
       ).toMatchSnapshot()
     })

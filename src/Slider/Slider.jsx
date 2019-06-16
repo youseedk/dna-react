@@ -17,6 +17,8 @@ const Slider = ({
   valueMin,
   valueMax,
   label,
+  labelMin,
+  labelMax,
   step,
   onChange,
   className,
@@ -36,10 +38,11 @@ const Slider = ({
   }
 
   const getSliderLabel = () => {
-    if (children) {
+    if (children || (labelMin && labelMax)) {
       const assistiveLabels = children
-        .map(sliderStep => sliderStep.props.children)
-        .join(', ')
+        ? children.map(sliderStep => sliderStep.props.children)
+          .join(', ')
+        : `mellem ${labelMin} og ${labelMax}`
 
       return (
         <span className="ys-u-visuallyhidden">
@@ -51,8 +54,24 @@ const Slider = ({
     return null
   }
 
+  const input = (
+    <span className="ys-slider__control-wrapper">
+      <input
+        id={id}
+        type="range"
+        value={value}
+        min={valueMin}
+        max={valueMax}
+        step={step}
+        onChange={handleChange}
+        className="ys-slider__control"
+      />
+    </span>
+  )
+
   return (
     <div {...wrapperProps}>
+      {/* eslint-disable-next-line jsx-a11y/label-has-for */}
       <label
         className="ys-slider__label"
         htmlFor={id}
@@ -68,18 +87,16 @@ const Slider = ({
             </span>
           )
         }
-        <span className="ys-slider__control-wrapper">
-          <input
-            id={id}
-            type="range"
-            value={value}
-            min={valueMin}
-            max={valueMax}
-            step={step}
-            onChange={handleChange}
-            className="ys-slider__control"
-          />
-        </span>
+        {(labelMin
+          && labelMax
+          && (
+            <span className="ys-slider__wrapper">
+              <span className="ys-slider__minmax-label" aria-hidden="true">{labelMin}</span>
+              {input}
+              <span className="ys-slider__minmax-label" aria-hidden="true">{labelMax}</span>
+            </span>
+          ))
+          || input}
       </label>
     </div>
   )
@@ -90,6 +107,8 @@ Slider.propTypes = {
   valueMin: PropTypes.number.isRequired,
   valueMax: PropTypes.number.isRequired,
   label: PropTypes.string.isRequired,
+  labelMin: PropTypes.string,
+  labelMax: PropTypes.string,
   onChange: PropTypes.func.isRequired,
   children: componentPropType(SliderStep, true),
   step: PropTypes.number,
@@ -99,6 +118,8 @@ Slider.propTypes = {
 Slider.defaultProps = {
   step: 1,
   children: null,
+  labelMin: '',
+  labelMax: '',
   className: '',
 }
 

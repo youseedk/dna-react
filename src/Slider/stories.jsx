@@ -52,3 +52,18 @@ storiesOf('Slider', module)
       </Slider>
     </State>
   ))
+  .add('With min/max labels', () => (
+    <State store={store}>
+      <Slider
+        value={number('value', store.get('value'), {}, 'Content')}
+        valueMin={number('valueMin', 1, {}, 'Content')}
+        valueMax={number('valueMax', 5, {}, 'Content')}
+        step={number('step', 1, {}, 'Content')}
+        label={text('label', 'Label', 'Content')}
+        labelMin={text('labelMin', '0%', 'Content')}
+        labelMax={text('labelMax', '100%', 'Content')}
+        onChange={updateStore.action('onChange')}
+        className={text('className', '', 'Misc')}
+      />
+    </State>
+  ))
