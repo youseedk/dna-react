@@ -3,6 +3,10 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import uniqueId from 'lodash.uniqueid'
 
+import SliderStep from './SliderStep'
+
+import componentPropType from '../helpers/componentPropType'
+
 import '../base.css'
 import '@youseedk/dna/css/elements/ys-slider.css'
 
@@ -16,6 +20,7 @@ const Slider = ({
   step,
   onChange,
   className,
+  children,
   ...props
 }) => {
   const wrapperProps = {
@@ -30,6 +35,22 @@ const Slider = ({
     onChange(parseInt(event.target.value, 10), event)
   }
 
+  const getSliderLabel = () => {
+    if (children) {
+      const assistiveLabels = children
+        .map(sliderStep => sliderStep.props.children)
+        .join(', ')
+
+      return (
+        <span className="ys-u-visuallyhidden">
+          {`(valgmulighederne er ${assistiveLabels})`}
+        </span>
+      )
+    }
+
+    return null
+  }
+
   return (
     <div {...wrapperProps}>
       <label
@@ -38,7 +59,15 @@ const Slider = ({
       >
         <span className="ys-slider__label-text">
           {label}
+          {getSliderLabel()}
         </span>
+        {children
+          && (
+            <span className="ys-slider__data-set" aria-hidden="true">
+              {children}
+            </span>
+          )
+        }
         <span className="ys-slider__control-wrapper">
           <input
             id={id}
@@ -62,13 +91,17 @@ Slider.propTypes = {
   valueMax: PropTypes.number.isRequired,
   label: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
+  children: componentPropType(SliderStep, true),
   step: PropTypes.number,
   className: PropTypes.string,
 }
 
 Slider.defaultProps = {
   step: 1,
+  children: null,
   className: '',
 }
+
+Slider.Step = SliderStep
 
 export default Slider

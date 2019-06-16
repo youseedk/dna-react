@@ -73,6 +73,7 @@ describe('<Slider>', () => {
     it('Has correct defaultProps', () => {
       const {
         className,
+        children,
         step,
       } = mount(
         <Slider
@@ -85,6 +86,7 @@ describe('<Slider>', () => {
       ).props()
 
       expect(className).toBe('')
+      expect(children).toBe(null)
       expect(step).toBe(1)
     })
   })
@@ -126,6 +128,47 @@ describe('<Slider>', () => {
         ).prop('id'),
       ).toBe('test')
     })
+
+    it('Renders a label for each <Slider.Step>', () => {
+      expect(
+        shallow(
+          <Slider
+            value={2}
+            valueMin={1}
+            valueMax={3}
+            label="Label"
+            onChange={jest.fn()}
+          >
+            <Slider.Step>Small</Slider.Step>
+            <Slider.Step>Medium</Slider.Step>
+            <Slider.Step>Large</Slider.Step>
+          </Slider>,
+        )
+          .find('.ys-slider__data-set')
+          .children()
+          .length,
+      ).toBe(3)
+    })
+
+    it('Displays assistive label containing step information', () => {
+      expect(
+        shallow(
+          <Slider
+            value={2}
+            valueMin={1}
+            valueMax={3}
+            label="Choose size"
+            onChange={jest.fn()}
+          >
+            <Slider.Step>20 GB</Slider.Step>
+            <Slider.Step>40 GB</Slider.Step>
+            <Slider.Step>80 GB</Slider.Step>
+          </Slider>,
+        )
+          .find('.ys-slider__label-text span')
+          .text(),
+      ).toBe('(valgmulighederne er 20 GB, 40 GB, 80 GB)')
+    })
   })
 
   describe('Snapshots', () => {
@@ -141,6 +184,25 @@ describe('<Slider>', () => {
             onChange={jest.fn()}
             className="lizard"
           />,
+        ),
+      ).toMatchSnapshot()
+    })
+
+    it('With steps', () => {
+      expect(
+        shallow(
+          <Slider
+            value={1}
+            valueMin={1}
+            valueMax={4}
+            label="Starbucks sizes"
+            onChange={jest.fn()}
+          >
+            <Slider.Step>Tall</Slider.Step>
+            <Slider.Step>Grande</Slider.Step>
+            <Slider.Step>Venti</Slider.Step>
+            <Slider.Step>Trenta</Slider.Step>
+          </Slider>,
         ),
       ).toMatchSnapshot()
     })

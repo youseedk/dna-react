@@ -33,3 +33,22 @@ storiesOf('Slider', module)
       />
     </State>
   ))
+  .add('With step labels', () => (
+    <State store={store}>
+      <Slider
+        value={number('value', store.get('value'), {}, 'Content')}
+        valueMin={number('valueMin', 1, {}, 'Content')}
+        valueMax={number('valueMax', 5, {}, 'Content')}
+        step={number('step', 1, {}, 'Content')}
+        label={text('label', 'Label', 'Content')}
+        onChange={updateStore.action('onChange')}
+        className={text('className', '', 'Misc')}
+      >
+        <Slider.Step>XS</Slider.Step>
+        <Slider.Step>S</Slider.Step>
+        <Slider.Step>M</Slider.Step>
+        <Slider.Step>L</Slider.Step>
+        <Slider.Step>XL</Slider.Step>
+      </Slider>
+    </State>
+  ))

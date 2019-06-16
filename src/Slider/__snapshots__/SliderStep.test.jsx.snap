@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SliderStep> Snapshots Default 1`] = `
+<span
+  className="ys-slider__data-item"
+>
+  Step label
+</span>
+`;
+
+exports[`<SliderStep> Snapshots With custom props 1`] = `
+<span
+  className="ys-slider__data-item wild-cats"
+  id="lynx"
+>
+  Step label
+</span>
+`;
