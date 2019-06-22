@@ -38,6 +38,28 @@ describe('<Anchor>', () => {
         expect(href).toBe(null)
         expect(disabled).toBe(false)
       })
+
+      it('Doesn\'t throw propType warning if `to` prop is a string, or an object', () => {
+        expect(
+          () => shallow(
+            <Anchor to="/best-page">
+              Best page
+            </Anchor>,
+          ),
+        ).not.toThrow()
+
+        expect(
+          () => shallow(
+            <Anchor to={{
+              pathname: '/best-page',
+              search: '?isit=yep',
+            }}
+            >
+              Best page
+            </Anchor>,
+          ),
+        ).not.toThrow()
+      })
     })
   })
 

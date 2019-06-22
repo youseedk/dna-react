@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
-import Anchor from '../helpers/Anchor'
+import Anchor, { anchorPropTypes } from '../helpers/Anchor'
 
 import '../base.css'
 import '@youseedk/dna/css/icons/ys-icons.css'
@@ -10,15 +10,11 @@ import '@youseedk/dna/css/elements/ys-shortcut.css'
 
 const Shortcut = ({
   label,
-  href,
-  to,
   icon: Icon,
   className,
   ...props
 }) => (
   <Anchor
-    href={href}
-    to={to}
     className={classNames(
       'ys-shortcut',
       className,
@@ -40,19 +36,14 @@ const Shortcut = ({
 Shortcut.propTypes = {
   label: PropTypes.string.isRequired,
   icon: PropTypes.elementType.isRequired,
-  to: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.func,
-  ]),
   href: PropTypes.string,
   className: PropTypes.string,
+  ...anchorPropTypes,
 }
 
 Shortcut.defaultProps = {
   className: '',
   href: null,
-  to: null,
 }
 
 export default Shortcut

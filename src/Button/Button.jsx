@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
-import Anchor from '../helpers/Anchor'
+import Anchor, { anchorPropTypes } from '../helpers/Anchor'
 
 import '../base.css'
 import '@youseedk/dna/css/icons/ys-icons.css'
@@ -90,11 +90,6 @@ const Button = ({
 Button.propTypes = {
   label: PropTypes.string.isRequired,
   onClick: PropTypes.func,
-  to: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.func,
-  ]),
   href: PropTypes.string,
   variant: PropTypes.oneOf(['light', 'cta', 'secondary-dark', 'secondary-light', 'tertiary-dark', 'tertiary-light']),
   disabled: PropTypes.bool,
@@ -103,6 +98,7 @@ Button.propTypes = {
   icon: PropTypes.elementType,
   iconOnly: PropTypes.bool,
   iconAlignment: PropTypes.oneOf(['left', 'right']),
+  ...anchorPropTypes,
 }
 /* eslint-enable react/require-default-props */
 

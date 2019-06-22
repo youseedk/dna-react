@@ -46,7 +46,6 @@ describe('<Shortcut>', () => {
 
       expect(className).toBe('')
       expect(href).toBe(null)
-      expect(to).toBe(null)
     })
   })
 

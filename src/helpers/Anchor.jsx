@@ -39,21 +39,45 @@ const Anchor = ({
   )
 }
 
-Anchor.propTypes = {
-  children: PropTypes.node.isRequired,
+const navLinkPropTypes = {
   to: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object,
     PropTypes.func,
   ]),
+  replace: PropTypes.bool,
+  target: PropTypes.string,
+  'aria-current': PropTypes.oneOf([
+    'page',
+    'step',
+    'location',
+    'date',
+    'time',
+    'true',
+  ]),
+  activeClassName: PropTypes.string,
+  activeStyle: PropTypes.object,
+  exact: PropTypes.bool,
+  isActive: PropTypes.func,
+  location: PropTypes.object,
+  strict: PropTypes.bool,
+  style: PropTypes.object,
+}
+
+Anchor.propTypes = {
+  children: PropTypes.node.isRequired,
   href: PropTypes.string,
   disabled: PropTypes.bool,
+  ...navLinkPropTypes,
 }
 
 Anchor.defaultProps = {
+  // eslint-disable-next-line react/default-props-match-prop-types
   to: null,
   href: null,
   disabled: false,
 }
+
+export { navLinkPropTypes as anchorPropTypes }
 
 export default Anchor
