@@ -90,7 +90,11 @@ const Button = ({
 Button.propTypes = {
   label: PropTypes.string.isRequired,
   onClick: PropTypes.func,
-  to: PropTypes.string,
+  to: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.func,
+  ]),
   href: PropTypes.string,
   variant: PropTypes.oneOf(['light', 'cta', 'secondary-dark', 'secondary-light', 'tertiary-dark', 'tertiary-light']),
   disabled: PropTypes.bool,

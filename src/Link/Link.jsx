@@ -31,7 +31,11 @@ const Link = ({
 
 Link.propTypes = {
   children: PropTypes.node.isRequired,
-  to: PropTypes.string,
+  to: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.func,
+  ]),
   href: PropTypes.string,
   className: PropTypes.string,
   unstyled: PropTypes.bool,
