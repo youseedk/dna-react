@@ -51,7 +51,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.4.2",
-    "@youseedk/dna": "^1.2.2",
+    "@youseedk/dna": "^1.2.3",
     "classnames": "^2.2.6",
     "lodash.uniqueid": "^4.0.1",
     "prop-types": "^15.7.2"
