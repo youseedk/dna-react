@@ -163,7 +163,7 @@ import {
   IconVoucher,
   IconYouseeCloud,
   IconYouseeMore,
-} from '..'
+} from '../src'
 
 export const uiIcons = {
   none: undefined,
