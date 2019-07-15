@@ -165,6 +165,7 @@ import IconYouseeCloud from '@youseedk/dna/svg/icon-set/yousee-cloud.svg'
 import IconYouseeMore from '@youseedk/dna/svg/icon-set/yousee-more.svg'
 
 // Components
+import Bow from './Bow'
 import Button from './Button'
 import FlowSteps from './FlowSteps'
 import Link from './Link'
@@ -176,6 +177,7 @@ import ProgressBar from './ProgressBar'
 import Tag from './Tag'
 
 export {
+  Bow,
   Button,
   FlowSteps,
   Link,
