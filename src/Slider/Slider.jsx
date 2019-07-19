@@ -7,9 +7,6 @@ import SliderStep from './SliderStep'
 
 import componentPropType from '../helpers/componentPropType'
 
-import '../base.css'
-import '@youseedk/dna/css/elements/ys-slider.css'
-
 const id = `slider-${uniqueId()}`
 
 const Slider = ({

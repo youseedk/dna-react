@@ -4,9 +4,6 @@ import classNames from 'classnames'
 
 import Anchor, { anchorPropTypes } from '../helpers/Anchor'
 
-import '../base.css'
-import '@youseedk/dna/css/elements/ys-link.css'
-
 const Link = ({
   children,
   className,

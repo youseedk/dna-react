@@ -6,6 +6,7 @@ import { decorate } from '@storybook/addon-actions'
 import { Store, State } from '@sambego/storybook-state'
 
 import Slider from './Slider'
+import '@youseedk/dna/css/elements/ys-slider.css'
 
 const store = new Store({
   value: 2,

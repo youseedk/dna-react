@@ -4,6 +4,7 @@ import { storiesOf } from '@storybook/react'
 import { text, select, number } from '@storybook/addon-knobs'
 
 import ProgressBar from './ProgressBar'
+import '@youseedk/dna/css/elements/ys-progress.css'
 
 const variants = {
   default: null,

@@ -20,6 +20,10 @@ $ npm i @youseedk/dna-react
 import React from 'react'
 import { Button } from '@youseedk/dna-react'
 
+// CSS is imported separately
+import '@youseedk/dna/css/icons/ys-icons.css'
+import '@youseedk/dna/css/elements/ys-button.css'
+
 const MyComponent = () => (
   <div>
     My component is good and does all the things

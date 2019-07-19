@@ -6,9 +6,6 @@ import FlowStepsItem from './FlowStepsItem'
 
 import componentPropType from '../helpers/componentPropType'
 
-import '../base.css'
-import '@youseedk/dna/css/elements/ys-flow-steps.css'
-
 const FlowSteps = ({
   children,
   className,

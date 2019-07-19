@@ -4,6 +4,7 @@ import { storiesOf } from '@storybook/react'
 import { text, select } from '@storybook/addon-knobs'
 
 import Bow from './Bow'
+import '@youseedk/dna/css/elements/ys-bow.css'
 
 const variants = {
   default: null,

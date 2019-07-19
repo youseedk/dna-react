@@ -4,10 +4,6 @@ import classNames from 'classnames'
 
 import Anchor, { anchorPropTypes } from '../helpers/Anchor'
 
-import '../base.css'
-import '@youseedk/dna/css/icons/ys-icons.css'
-import '@youseedk/dna/css/elements/ys-button.css'
-
 const Button = ({
   label,
   to,

@@ -4,6 +4,7 @@ import { storiesOf } from '@storybook/react'
 import { text, select, number } from '@storybook/addon-knobs'
 
 import Splash from './Splash'
+import '@youseedk/dna/css/elements/ys-splash.css'
 
 const variants = {
   yellow: 'yellow',

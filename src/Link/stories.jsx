@@ -5,6 +5,7 @@ import StoryRouter from 'storybook-react-router'
 import { text } from '@storybook/addon-knobs'
 
 import Link from './Link'
+import '@youseedk/dna/css/elements/ys-link.css'
 
 storiesOf('Link', module)
   .addParameters({ jest: ['Link'] })

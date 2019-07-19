@@ -4,6 +4,7 @@ import { storiesOf } from '@storybook/react'
 import { text } from '@storybook/addon-knobs'
 
 import FlowSteps from './FlowSteps'
+import '@youseedk/dna/css/elements/ys-flow-steps.css'
 
 storiesOf('FlowSteps', module)
   .addParameters({ jest: ['FlowSteps', 'FlowStepsItem'] })

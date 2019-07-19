@@ -2,9 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
-import '../base.css'
-import '@youseedk/dna/css/elements/ys-bow.css'
-
 const Bow = ({
   variant,
   className,

@@ -7,6 +7,8 @@ import { action } from '@storybook/addon-actions'
 
 import Button from './Button'
 import { uiIcons as icons } from '../../utils/iconMapper'
+import '@youseedk/dna/css/icons/ys-icons.css'
+import '@youseedk/dna/css/elements/ys-button.css'
 
 const variants = {
   default: null,

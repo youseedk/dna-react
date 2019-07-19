@@ -10,10 +10,6 @@ import NotificationTextLink from './NotificationTextLink'
 
 import componentPropType from '../helpers/componentPropType'
 
-import '../base.css'
-import '@youseedk/dna/css/icons/ys-icons.css'
-import '@youseedk/dna/css/elements/ys-notification.css'
-
 const Notification = ({
   variant,
   className,

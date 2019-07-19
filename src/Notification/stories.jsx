@@ -4,6 +4,8 @@ import { storiesOf } from '@storybook/react'
 import { select, text } from '@storybook/addon-knobs'
 
 import Notification from './Notification'
+import '@youseedk/dna/css/icons/ys-icons.css'
+import '@youseedk/dna/css/elements/ys-notification.css'
 
 const variants = {
   info: 'info',
