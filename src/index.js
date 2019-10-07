@@ -175,6 +175,7 @@ import Shortcut from './Shortcut'
 import Splash from './Splash'
 import ProgressBar from './ProgressBar'
 import Tag from './Tag'
+import ToggleSwitch from './ToggleSwitch'
 
 export {
   Bow,
@@ -187,6 +188,7 @@ export {
   Splash,
   ProgressBar,
   Tag,
+  ToggleSwitch,
   IconUIArrowDown,
   IconUIArrowLeft,
   IconUIArrowRight,
