@@ -2,9 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
-import IconUIInformation from '@youseedk/dna/svg/ui-icons/information.svg'
-import IconUIExclamationMark from '@youseedk/dna/svg/ui-icons/exclamation-mark.svg'
-import IconUICheckMark from '@youseedk/dna/svg/ui-icons/check-mark.svg'
 import NotificationText from './NotificationText'
 import NotificationTextLink from './NotificationTextLink'
 
@@ -18,10 +15,35 @@ const Notification = ({
 }) => {
   const Icon = () => {
     const variantIcons = {
-      info: IconUIInformation,
-      success: IconUICheckMark,
-      warning: IconUIExclamationMark,
-      error: IconUIExclamationMark,
+      info: () => (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2 12">
+          <g fill="none" fillRule="evenodd">
+            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5v6" />
+            <path fill="currentColor" d="M2 1a1 1 0 11-2 0 1 1 0 012 0" />
+          </g>
+        </svg>
+      ),
+      success: () => (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 10">
+          <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1.5 5.124L5.01 8.75l5.49-7.5" />
+        </svg>
+      ),
+      warning: () => (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2 12">
+          <g fill="none" fillRule="evenodd">
+            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1v6" />
+            <path fill="currentColor" d="M2 11a1 1 0 11-2 0 1 1 0 012 0" />
+          </g>
+        </svg>
+      ),
+      error: () => (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2 12">
+          <g fill="none" fillRule="evenodd">
+            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1v6" />
+            <path fill="currentColor" d="M2 11a1 1 0 11-2 0 1 1 0 012 0" />
+          </g>
+        </svg>
+      ),
     }
 
     const VariantIcon = variantIcons[variant]
