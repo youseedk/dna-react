@@ -8,20 +8,33 @@ describe('<ToggleSwitch>', () => {
     it('Has correct defaultProps', () => {
       const component = mount(
         <ToggleSwitch
+          onChange={jest.fn()}
           label="Click me!"
         />,
       )
 
       const {
+        defaultChecked,
         className,
       } = component.props()
 
+      expect(defaultChecked).toBe(false)
       expect(className).toBe('')
+    })
+
+    it('Throws propType warning if no `onChange` prop is passed', () => {
+      expect(
+        () => <ToggleSwitch
+          label="Click me!"
+        />,
+      ).toThrow()
     })
 
     it('Throws propType warning if no `label` prop is passed', () => {
       expect(
-        () => <ToggleSwitch />,
+        () => <ToggleSwitch
+          onChange={jest.fn()}
+        />,
       ).toThrow()
     })
   })
@@ -43,6 +56,7 @@ describe('<ToggleSwitch>', () => {
       expect(
         shallow(
           <ToggleSwitch
+            onChange={jest.fn()}
             label="Click me!"
             className="snail"
           />,
@@ -56,6 +70,7 @@ describe('<ToggleSwitch>', () => {
       expect(
         shallow(
           <ToggleSwitch
+            onChange={jest.fn()}
             label="Toggle flying reptiles"
           />,
         )
@@ -68,11 +83,33 @@ describe('<ToggleSwitch>', () => {
       expect(
         shallow(
           <ToggleSwitch
+            onChange={jest.fn()}
             label="Click me!"
             id="polyphyly"
           />,
         ).props().id,
       ).toBe('polyphyly')
+    })
+
+    it('Forwards `onChange` and `defaltChecked` to input element', () => {
+      const changeHandler = jest.fn()
+      const component = shallow(
+        <ToggleSwitch
+          onChange={changeHandler}
+          defaultChecked={true}
+          label="Click me!"
+        />,
+      )
+
+      const {
+        onChange,
+        defaultChecked,
+      } = component
+        .find('.ys-toggle-switch__control')
+        .props()
+
+      expect(onChange).toBe(changeHandler)
+      expect(defaultChecked).toBe(true)
     })
   })
 
@@ -81,6 +118,7 @@ describe('<ToggleSwitch>', () => {
       expect(
         shallow(
           <ToggleSwitch
+            onChange={jest.fn()}
             label="Toggle flying reptiles"
             className="pterosaur"
           />,

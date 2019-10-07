@@ -6,7 +6,9 @@ exports[`<ToggleSwitch> Snapshots With custom \`className\` 1`] = `
 >
   <input
     className="ys-toggle-switch__control ys-u-visuallyhidden"
+    defaultChecked={false}
     id="toggle-switch-1"
+    onChange={[MockFunction]}
     type="checkbox"
   />
   <label

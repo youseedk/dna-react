@@ -7,6 +7,8 @@ const id = `toggle-switch-${uniqueId()}`
 
 const ToggleSwitch = ({
   label,
+  defaultChecked,
+  onChange,
   className,
   ...props
 }) => {
@@ -25,6 +27,8 @@ const ToggleSwitch = ({
       <input
         type="checkbox"
         id={id}
+        defaultChecked={defaultChecked}
+        onChange={onChange}
         className="ys-toggle-switch__control ys-u-visuallyhidden"
       />
       <label
@@ -39,10 +43,13 @@ const ToggleSwitch = ({
 
 ToggleSwitch.propTypes = {
   label: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+  defaultChecked: PropTypes.bool,
   className: PropTypes.string,
 }
 
 ToggleSwitch.defaultProps = {
+  defaultChecked: false,
   className: '',
 }
 
