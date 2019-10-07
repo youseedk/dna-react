@@ -12,6 +12,11 @@ console.error = (message) => {
   if (/(Failed prop type)/.test(message)) {
     throw new Error(message)
   }
-
+  
+  // This workaround (hack, I mean) does not preserve
+  // the stack trace, so please keep this in mind when
+  // debugging errors during test running. Disable
+  // this entire thing if you encounter an indecipherable
+  // error or warning.
   originalConsoleError(message)
 }
