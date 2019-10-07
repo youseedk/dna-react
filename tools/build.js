@@ -11,13 +11,11 @@ const clean = () => fse.existsSync(libRoot) && fse.removeSync(libRoot)
 const shell = cmd => execa.shell(cmd, { stdio: ['pipe', 'pipe', 'inherit'] })
 
 const buildCjs = async () => {
-  await shell(`npx babel ${srcRoot} --out-dir ${libRoot} --env-name "cjs" \
-    && cp ${srcRoot}/helpers/componentPropType.js ${libRoot}/helpers/componentPropType.js`)
+  await shell(`npx babel ${srcRoot} --out-dir ${libRoot} --env-name "cjs"`)
 }
 
 const buildEsm = async () => {
-  await shell(`npx babel ${srcRoot} --out-dir ${esRoot} --env-name "esm" \
-    && cp ${srcRoot}/helpers/componentPropType.js ${esRoot}/helpers/componentPropType.js`)
+  await shell(`npx babel ${srcRoot} --out-dir ${esRoot} --env-name "esm"`)
 }
 
 clean()
