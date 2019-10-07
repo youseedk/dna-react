@@ -1,0 +1,1 @@
+{"version":3,"file":"main.24a8c07fe9e3c2f6a8f3.bundle.js","sources":["webpack:///./src/Link/index.js"],"sourcesContent":["import Link from './Link'\n\nexport default Link\n"],"mappings":"AAAA","sourceRoot":""}
