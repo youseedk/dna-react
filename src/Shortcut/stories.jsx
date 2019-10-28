@@ -5,7 +5,7 @@ import StoryRouter from 'storybook-react-router'
 import { text, select } from '@storybook/addon-knobs'
 
 import Shortcut from './Shortcut'
-import { setIcons as icons } from '../../utils/iconMapper'
+import icons from '../../utils/iconMapper'
 import '@youseedk/dna/css/icons/ys-icons.css'
 import '@youseedk/dna/css/elements/ys-shortcut.css'
 
