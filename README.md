@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/youseedk/dna-react.svg?branch=master)](https://travis-ci.org/youseedk/dna-react) [![codecov](https://codecov.io/gh/havgry/ys-react/branch/master/graph/badge.svg)](https://codecov.io/gh/havgry/ys-react) [![npm version](https://badge.fury.io/js/%40youseedk%2Fdna-react.svg)](https://badge.fury.io/js/%40youseedk%2Fdna-react)
 
+**This repository is deprecated. You should go to [Nuuday DNA React](https://github.com/nuuday/dna-react/) instead. This repository was the initial effort of combining React with YouSee DNA in an intuitive and effortless way.**
+
 React component library implementing [YouSee DNA](https://github.com/youseedk/dna). It's merely a React implementation of YouSee DNA meaning that bugs regarding styling/markup, feature requests for new components or component variants should be directed towards [YouSee DNA](https://github.com/youseedk/dna/issues).
 
 ## Installation and use
